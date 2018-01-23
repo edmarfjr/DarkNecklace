@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Piso
+  - ataque
+  - inimigo
+  - inimigoCol
+  - player_col
+  - BUCETA
+  - ataqueIni
+  - checaIni
+  - municao
+  - Moeda
+  - itemArremeco
+  - Boss
+  - gameStatus
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Piso
+  - inimigo
+  - PC_Col
+  - Ini_Col
+  - PC_chao
+  - MORTE
+  - PC_Atk
+  - itens
+  - PC_bloq
+  - bloqParede
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
