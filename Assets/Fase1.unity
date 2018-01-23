@@ -2944,11 +2944,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1804594085440946, guid: c4307f4d36727ec4e82e5533b77f4d9a,
     type: 2}
   m_PrefabInternal: {fileID: 1052178627}
---- !u!82 &450115958 stripped
-AudioSource:
-  m_PrefabParentObject: {fileID: 82341985068600756, guid: c4307f4d36727ec4e82e5533b77f4d9a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1052178627}
 --- !u!1 &474871385
 GameObject:
   m_ObjectHideFlags: 0
@@ -5394,23 +5389,7 @@ Prefab:
       propertyPath: moeda
       value: 
       objectReference: {fileID: 1115391468}
-    - target: {fileID: 114909203139231492, guid: c4307f4d36727ec4e82e5533b77f4d9a,
-        type: 2}
-      propertyPath: lovPitchRange
-      value: 0.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 114909203139231492, guid: c4307f4d36727ec4e82e5533b77f4d9a,
-        type: 2}
-      propertyPath: highPitchRange
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114909203139231492, guid: c4307f4d36727ec4e82e5533b77f4d9a,
-        type: 2}
-      propertyPath: sfxSource
-      value: 
-      objectReference: {fileID: 450115958}
-    m_RemovedComponents:
-    - {fileID: 114340983932333750, guid: c4307f4d36727ec4e82e5533b77f4d9a, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4307f4d36727ec4e82e5533b77f4d9a, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1055772073
