@@ -30,7 +30,7 @@ public class Ratman : MonoBehaviour
     public AudioClip ataq;
     public AudioClip tiro;
     public AudioClip hit;
-
+    public AudioSource sfxSource;
 
     void Start()
     {
@@ -136,7 +136,7 @@ public class Ratman : MonoBehaviour
         {
             rbd.velocity = new Vector2(0, 0);
             atacando = true;
-       //     soundManager.instance.PlaySingle(ataq, 1.2f);
+            PlaySingle(ataq, 1.2f);
             esperAtaq = 1;
             anim.SetBool("atacando", true);
             yield return new WaitForSeconds(0.8f);
@@ -151,7 +151,7 @@ public class Ratman : MonoBehaviour
             esperAtaq = 5;
             anim.SetBool("atirando", true);
             yield return new WaitForSeconds(0.2f);
-       //     soundManager.instance.PlaySingle(tiro, 1f);
+            PlaySingle(tiro, 1f);
             yield return new WaitForSeconds(0.6f);
             criaFlecha();
             anim.SetBool("atirando", false);
@@ -165,7 +165,7 @@ public class Ratman : MonoBehaviour
     {
         Debug.Log("MORRE RATO");
         tempStag = 1f;
-        //soundManager.instance.PlaySingle(hit, 1f);
+        PlaySingle(hit, 1f);
         anim.SetTrigger("golpeado");
         if (PC.transform.position.x>rbd.position.x)
             rbd.velocity = new Vector2(-4*kb, 1);
@@ -221,5 +221,11 @@ public class Ratman : MonoBehaviour
             cloneFlecha.transform.localScale = this.transform.localScale;
         }
         
+    }
+    public void PlaySingle(AudioClip clip, float aux)
+    {
+        sfxSource.clip = clip;
+        sfxSource.pitch = aux;
+        sfxSource.Play();
     }
 }

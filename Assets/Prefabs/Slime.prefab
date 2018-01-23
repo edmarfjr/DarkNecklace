@@ -56,8 +56,8 @@ GameObject:
   - component: {fileID: 50742251154015502}
   - component: {fileID: 58114110185863634}
   - component: {fileID: 114712068874712412}
-  - component: {fileID: 82086043897643082}
   - component: {fileID: 114307843715140018}
+  - component: {fileID: 82086043897643082}
   m_Layer: 9
   m_Name: Slime
   m_TagString: inimigo
@@ -126,7 +126,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1320599045723708}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.79947, y: 16.001684, z: 0}
+  m_LocalPosition: {x: -14.912947, y: -16.875408, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children:
   - {fileID: 4653552750243314}
@@ -324,6 +324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posi1: {fileID: 4653552750243314}
   posi2: {fileID: 4036690156639256}
+  sfxSource: {fileID: 82086043897643082}
   vida: 5
   chao: 0
   agro: 0

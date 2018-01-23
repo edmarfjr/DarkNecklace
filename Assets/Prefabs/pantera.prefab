@@ -59,7 +59,6 @@ GameObject:
   - component: {fileID: 50139112959128390}
   - component: {fileID: 61723820125378480}
   - component: {fileID: 82276282548206842}
-  - component: {fileID: 114123319559330222}
   m_Layer: 9
   m_Name: pantera
   m_TagString: inimigo
@@ -74,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1968916689784012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7991219, y: -17.02185, z: 0}
+  m_LocalPosition: {x: -3.824748, y: -16.951878, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4534598397039060}
@@ -300,21 +299,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114123319559330222
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1968916689784012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 963ef44890e37784f94a3c7239a801c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sfxSource: {fileID: 82276282548206842}
-  musicSound: {fileID: 0}
-  lovPitchRange: 0.95
-  highPitchRange: 1
 --- !u!114 &114625469708623508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -348,8 +332,9 @@ MonoBehaviour:
   drop2: {fileID: 1161104320283856, guid: 2ffeb29a0519c1842aa5f6d1573767a8, type: 2}
   encostouDir: 0
   coll: {fileID: 0}
-  ataq: {fileID: 0}
-  hit: {fileID: 0}
+  ataq: {fileID: 8300000, guid: b3eb263194de41048a20396870748092, type: 3}
+  hit: {fileID: 8300000, guid: 454ecb8e9b2fee143b53c18d66cc0070, type: 3}
+  sfxSource: {fileID: 82276282548206842}
 --- !u!114 &114634810895937140
 MonoBehaviour:
   m_ObjectHideFlags: 1

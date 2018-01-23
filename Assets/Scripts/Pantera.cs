@@ -28,6 +28,7 @@ public class Pantera : MonoBehaviour
     public BoxCollider2D coll;
     public AudioClip ataq;
     public AudioClip hit;
+    public AudioSource sfxSource;
 
     // Use this for initialization
     void Start()
@@ -161,7 +162,7 @@ public class Pantera : MonoBehaviour
             if (posInicio.x > posPC.x && !atacando)
             {
                 atacando = true;
-            //    soundManager.instance.PlaySingle(ataq, 0.6f);
+                PlaySingle(ataq, 0.6f);
                 dir = -1;
                 anim.SetBool("atacando", true);
                 yield return new WaitForSeconds(1.1f);
@@ -172,7 +173,7 @@ public class Pantera : MonoBehaviour
             if (posInicio.x < posPC.x && !atacando)
             {
                 atacando = true;
-           //     soundManager.instance.PlaySingle(ataq, 0.6f);
+                PlaySingle(ataq, 0.6f);
                 dir = 1;
                 anim.SetBool("atacando", true);
                 yield return new WaitForSeconds(1.1f);
@@ -197,7 +198,7 @@ public class Pantera : MonoBehaviour
     public void tomouDano(int x, float kb)
     {
         tempStag = 1f;
-       // soundManager.instance.PlaySingle(hit, 0.6f);
+       PlaySingle(hit, 0.6f);
         anim.SetTrigger("golpeado");
         if (PC.transform.position.x > rbd.position.x)
             rbd.velocity = new Vector2(-4 * kb, rbd.velocity.y);
@@ -222,5 +223,11 @@ public class Pantera : MonoBehaviour
             Vector3 pos = new Vector3(rbd.transform.position.x, rbd.transform.position.y + 1, -1);
             Instantiate(drop2, pos, Quaternion.identity);
         }
+    }
+    public void PlaySingle(AudioClip clip, float aux)
+    {
+        sfxSource.clip = clip;
+        sfxSource.pitch = aux;
+        sfxSource.Play();
     }
 }

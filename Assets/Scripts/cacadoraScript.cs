@@ -55,6 +55,9 @@ public class cacadoraScript : MonoBehaviour {
     public string itemTipo;
     public float somAndaTemp;
     public GameObject gStatus;
+    public AudioSource sfxSource;
+    public float lovPitchRange;
+    public float highPitchRange;
 
     // Use this for initialization
     void Start () {
@@ -162,7 +165,7 @@ public class cacadoraScript : MonoBehaviour {
 	void Andar ()
 	{	if (andasom == true && somAndaTemp<=0 && estaNoChao&&!dash)
         {
-          //  soundManager.instance.RandomsizeSdx(moveSound1);
+          RandomsizeSdx(moveSound1);
             somAndaTemp = 0.5f;       
         }
 		if (dash == false && atacou == false&&dead==false) {
@@ -205,7 +208,7 @@ public class cacadoraScript : MonoBehaviour {
 	{
 		if (Input.GetButtonDown("Jump") && estaNoChao && !dash) {
 			rbd.velocity = new Vector2 (rbd.velocity.x, pulo);
-         //   soundManager.instance.PlaySingle(Jump1, 1.3f);
+         PlaySingle(Jump1, 1.3f);
         }
 	}
 
@@ -213,7 +216,7 @@ public class cacadoraScript : MonoBehaviour {
 	{
 		if (Input.GetButtonDown("Fire3") && estaNoChao && vigor>=1 && dash == false&&dead==false&& invencibilidade <= 0) {
 			dash = true;
-           // soundManager.instance.PlaySingle(dash1, 1.4f);
+           PlaySingle(dash1, 1.4f);
             anim.SetBool ("esquiva", true);
 			if (direita==true) {
 				rbd.velocity=new Vector2(esquiva,rbd.velocity.y);
@@ -260,7 +263,7 @@ public class cacadoraScript : MonoBehaviour {
             if (Input.GetButtonDown("Fire2") && atacou == false && vigor > 0 && dead == false && municao > 0&&estaNoChao)
             {
                 // vigor -= 2;
-                //soundManager.instance.PlaySingle(ataca1, 1.4f);
+                PlaySingle(ataca1, 1.4f);
                 atacou = true;
                 anim.SetBool("throw", true);
                 yield return new WaitForSeconds(0.2f);
@@ -276,7 +279,7 @@ public class cacadoraScript : MonoBehaviour {
                 if (Input.GetButtonDown("Fire2") && atacou == false && vigor > 0 && dead == false && municao > 0 && estaNoChao)
                 {
                    // vigor -= 4;
-                    //soundManager.instance.PlaySingle (ataca1);
+                   // PlaySingle (ataca1);
 
                     atacou = true;
 
@@ -298,7 +301,7 @@ public class cacadoraScript : MonoBehaviour {
         {
             if (Input.GetButtonDown("Fire1") && atacou == false && vigor > 0 && dead == false && estaNoChao) {
                 vigor -= 4;
-               // soundManager.instance.PlaySingle(ataca1,1);
+               PlaySingle(ataca1,1);
 
                 atacou = true;
 
@@ -317,7 +320,7 @@ public class cacadoraScript : MonoBehaviour {
             {
                 vigor -= 2;
                 
-              //  soundManager.instance.PlaySingle (ataca1,1.3f);
+              PlaySingle (ataca1,1.3f);
 
                 atacou = true;
                 float x=0;
@@ -343,7 +346,7 @@ public class cacadoraScript : MonoBehaviour {
             if (Input.GetButtonDown("Fire1") && atacou == false && vigor > 0 && dead == false && estaNoChao)
             {
                 vigor -= 6;
-             //   soundManager.instance.PlaySingle (ataca1,0.7f);
+             PlaySingle (ataca1,0.7f);
 
                 atacou = true;
 
@@ -361,7 +364,7 @@ public class cacadoraScript : MonoBehaviour {
             {
                 vigor -= 4;
                 yield return new WaitForSeconds(0.1f);
-             //   soundManager.instance.PlaySingle (ataca1, 0.6f);
+             PlaySingle (ataca1, 0.6f);
 
                 atacou = true;
 
@@ -378,7 +381,7 @@ public class cacadoraScript : MonoBehaviour {
             if (Input.GetButtonDown("Fire1") && atacou == false && vigor > 0 && dead == false && estaNoChao)
             {
                 vigor -= 4;
-              //  soundManager.instance.PlaySingle (ataca1,1f);
+              PlaySingle (ataca1,1f);
 
                 atacou = true;
 
@@ -395,7 +398,7 @@ public class cacadoraScript : MonoBehaviour {
             if (Input.GetButtonDown("Fire1") && atacou == false && vigor > 0 && dead == false && estaNoChao)
             {
                 vigor -= 3;
-             //   soundManager.instance.PlaySingle(ataca1, 0.9f);
+             PlaySingle(ataca1, 0.9f);
 
                 atacou = true;
 
@@ -436,7 +439,7 @@ public class cacadoraScript : MonoBehaviour {
         { 
          
                 rbd.velocity = new Vector2(knockPwr, rbd.velocity.y);
-         //   soundManager.instance.PlaySingle(die1, 1.4f);
+         PlaySingle(die1, 1.4f);
             //encostouDir = false;
         }
     }
@@ -447,7 +450,7 @@ public class cacadoraScript : MonoBehaviour {
         {
 
             rbd.velocity = new Vector2(-knockPwr, rbd.velocity.y);
-         //   soundManager.instance.PlaySingle(die1, 1.4f);
+         PlaySingle(die1, 1.4f);
 
             //encostouDir = false;
         }
@@ -477,7 +480,7 @@ public class cacadoraScript : MonoBehaviour {
         {
             int i = Random.Range(1, 5);
             moedas += i;
-         //  soundManager.instance.PlaySingle(pegaMoeda, 1.4f);
+         PlaySingle(pegaMoeda, 1.4f);
             Destroy(col.gameObject);
         }
 
@@ -488,4 +491,19 @@ public class cacadoraScript : MonoBehaviour {
         cloneItem.transform.localScale = this.transform.localScale;
     }
 
+    public void PlaySingle(AudioClip clip, float aux)
+    {
+        sfxSource.clip = clip;
+        sfxSource.pitch = aux;
+        sfxSource.Play();
+    }
+
+    public void RandomsizeSdx(params AudioClip[] clip)
+    {
+        int randomIndex = Random.Range(0, clip.Length);
+        float randomPitch = Random.Range(lovPitchRange, highPitchRange);
+        sfxSource.clip = clip[randomIndex];
+        sfxSource.pitch = randomPitch;
+        sfxSource.Play();
+    }
 }

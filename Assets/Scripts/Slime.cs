@@ -8,8 +8,8 @@ public class Slime : MonoBehaviour {
 
 	public Transform posi1;
 	public Transform posi2;
-
-	public int vida; 
+    public AudioSource sfxSource;
+    public int vida; 
 	public bool chao;
 	public bool agro;
 	private Rigidbody2D slime;
@@ -53,7 +53,7 @@ public class Slime : MonoBehaviour {
 				//slime.transform.eulerAngles = new Vector2 (0, 0);
 
 				if (chao == true && pausaPulo == false) {
-				//	soundManager.instance.PlaySingle (pula,1);
+				    PlaySingle (pula,1);
 					slime.velocity = new Vector2 (1 * velx, slime.velocity.y);
 					slime.velocity = new Vector2 (slime.velocity.x, vely);
 					StartCoroutine(PausaPulo());
@@ -64,7 +64,7 @@ public class Slime : MonoBehaviour {
 
 				//slime.transform.localScale.x=-1;
 				if (chao == true && pausaPulo == false) {
-					//soundManager.instance.PlaySingle (pula,1);
+					PlaySingle (pula,1);
 					slime.velocity = new Vector2 (-1 * velx, slime.velocity.y);
 					slime.velocity = new Vector2 (slime.velocity.x, vely);
 					StartCoroutine(PausaPulo());
@@ -109,7 +109,7 @@ public class Slime : MonoBehaviour {
 			if (personagem.position.x < slime.position.x) {
 				slime.velocity = new Vector2 (1 * 5 * kn, slime.velocity.y);
 			}
-		//	soundManager.instance.PlaySingle (danoS,1);
+		    PlaySingle (danoS,1);
 			vida -= dano.dano;
 		}
         if (col.tag.Equals("itemArremeco"))
@@ -124,7 +124,7 @@ public class Slime : MonoBehaviour {
             {
                 slime.velocity = new Vector2(1 * 5 * kn, slime.velocity.y);
             }
-            //soundManager.instance.PlaySingle (dano);
+            PlaySingle (danoS,1);
             vida -= dano.dano;
         }
      
@@ -151,7 +151,7 @@ public class Slime : MonoBehaviour {
             if (vida <= 0)
             {
                 morreu = true;
-             //   soundManager.instance.PlaySingle(morre, 1);
+                PlaySingle(morre, 1);
                 ChecaIni checa = checaini.GetComponent<ChecaIni>();
                 checa.morreuUm();
                 anim.SetBool("morrendo",true);
@@ -173,5 +173,11 @@ public class Slime : MonoBehaviour {
             Vector3 pos = new Vector3(slime.transform.position.x, slime.transform.position.y + 1,-1);
             Instantiate(drop2, pos, Quaternion.identity);
         }
+    }
+    public void PlaySingle(AudioClip clip, float aux)
+    {
+        sfxSource.clip = clip;
+        sfxSource.pitch = aux;
+        sfxSource.Play();
     }
 }

@@ -59,7 +59,6 @@ GameObject:
   - component: {fileID: 114893328587412124}
   - component: {fileID: 95820276611238164}
   - component: {fileID: 82795081639749042}
-  - component: {fileID: 114548810119467298}
   m_Layer: 9
   m_Name: Ratman 1
   m_TagString: inimigo
@@ -100,7 +99,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1684178367023420}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.591032, y: -17.180002, z: 0}
+  m_LocalPosition: {x: -20.380577, y: -17.219524, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4395081895527698}
@@ -294,21 +293,6 @@ MonoBehaviour:
   PC: {fileID: 0}
   dano: 1
   rbd: {fileID: 50311837223926722}
---- !u!114 &114548810119467298
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1684178367023420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 963ef44890e37784f94a3c7239a801c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sfxSource: {fileID: 82795081639749042}
-  musicSound: {fileID: 0}
-  lovPitchRange: 0.95
-  highPitchRange: 1
 --- !u!114 &114893328587412124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -345,6 +329,7 @@ MonoBehaviour:
   ataq: {fileID: 8300000, guid: 7ef9115a9adf4e44ab1781d56da45d75, type: 3}
   tiro: {fileID: 0}
   hit: {fileID: 8300000, guid: 5e16ccc99bfe0904ba73e7a7c54ade46, type: 3}
+  sfxSource: {fileID: 82795081639749042}
 --- !u!114 &114959298644832116
 MonoBehaviour:
   m_ObjectHideFlags: 1

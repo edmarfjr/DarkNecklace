@@ -40,7 +40,6 @@ GameObject:
   - component: {fileID: 114381907814177630}
   - component: {fileID: 95556179101142176}
   - component: {fileID: 82039967231882576}
-  - component: {fileID: 114551203111097476}
   m_Layer: 9
   m_Name: Ratman Arqueiro
   m_TagString: inimigo
@@ -102,7 +101,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1435882455960708}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.902477, y: -17.140465, z: 0}
+  m_LocalPosition: {x: -17.742352, y: -17.219524, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4236030971436968}
@@ -345,21 +344,7 @@ MonoBehaviour:
   ataq: {fileID: 0}
   tiro: {fileID: 8300000, guid: 21b9a93eda95b75408d697acdceec325, type: 3}
   hit: {fileID: 8300000, guid: e33085a8b663d244a91bc23a1dde8c10, type: 3}
---- !u!114 &114551203111097476
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1435882455960708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 963ef44890e37784f94a3c7239a801c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   sfxSource: {fileID: 82039967231882576}
-  musicSound: {fileID: 0}
-  lovPitchRange: 0.95
-  highPitchRange: 1
 --- !u!114 &114888030912843456
 MonoBehaviour:
   m_ObjectHideFlags: 1
