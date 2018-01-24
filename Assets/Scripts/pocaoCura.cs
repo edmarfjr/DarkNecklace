@@ -14,6 +14,7 @@ public class pocaoCura : MonoBehaviour {
     public int preco;
     public bool semGrana;
     public AudioClip bebeu;
+    public AudioSource sfxSource;
     // Use this for initialization
     void Start()
     {
@@ -44,7 +45,7 @@ public class pocaoCura : MonoBehaviour {
                 {
                     scriPC.moedas -= preco;
                     int aux = Random.Range(1, 5);
-                    soundManager.instance.PlaySingle(bebeu, 1f);
+                    PlaySingle(bebeu, 1f);
                     scriPC.vida += aux;
                     Destroy(this.gameObject);
                 }
@@ -67,9 +68,15 @@ public class pocaoCura : MonoBehaviour {
             }
             if (semGrana == true)
             {
-                GUI.Label(new Rect(a, b, c, d), "sem moedas suficiente");
+                GUI.Label(new Rect(Screen.height / 1.2f, Screen.width / 3 - 50, 100, 100), "sem moedas suficiente");
             }
         }
+    }
+    public void PlaySingle(AudioClip clip, float aux)
+    {
+        sfxSource.clip = clip;
+        sfxSource.pitch = aux;
+        sfxSource.Play();
     }
 }
 

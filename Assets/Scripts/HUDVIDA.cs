@@ -25,19 +25,19 @@ public class HUDVIDA : MonoBehaviour {
 
         Vector2 temp = BarraVida.transform.localScale;
         if (script.vida >= 0)
-            temp = new Vector2(script.vida * 0.179f, 0.50f);
+            temp = new Vector2(tamanhoVida, 1f);
         else
-            temp = new Vector2(0, 0.50f);
+            temp = new Vector2(0, 0.1f);
         BarraVida.transform.localScale = temp;
 
         Vector2 temp2 = barra.transform.localScale;
         if (script.vida >= 0)
-            temp2 = new Vector2(script.vidaMax * 0.2f, 1f);
+            temp2 = new Vector2((script.vidaMax/10) * 1f, 1f);
         barra.transform.localScale = temp2;
 
         Vector2 temp3 = barraFundo.transform.localScale;
         if (script.vida >= 0)
-            temp3 = new Vector2(script.vidaMax * 0.2f, 1f);
+            temp3 = new Vector2((script.vidaMax / 10) * 1f, 1f);
         barra.transform.localScale = temp3;
 
     }

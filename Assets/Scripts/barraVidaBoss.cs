@@ -34,18 +34,15 @@ public class barraVidaBoss : MonoBehaviour {
             Vector2 temp4 = barra3.transform.localScale;
             if (script.ativo)
             {
-                temp1 = new Vector2(3.14344f, 0.30179f);
-                temp2 = new Vector2(3.14344f, 0.2867008f);
-                temp3 = new Vector2(3.14344f, 0.2867007f);
-                temp4 = new Vector2(3.14344f, 0.2867f);
+                temp1 = new Vector2(1f, 1f);
                 barra.transform.localScale = temp1;
-                barra1.transform.localScale = temp2;
-                barra2.transform.localScale = temp3;
-                barra3.transform.localScale = temp4;
+                barra1.transform.localScale = temp1;
+                barra2.transform.localScale = temp1;
+                barra3.transform.localScale = temp1;
                 if (script.vida >= 0)
-                    temp = new Vector2(tamanhoVida * 4f, 0.30f);
+                    temp = new Vector2(tamanhoVida * 1f, 1f);
                 else
-                    temp = new Vector2(0, 0.50f);
+                    temp = new Vector2(0, 1f);
                 BarraVida.transform.localScale = temp;
             }
             else

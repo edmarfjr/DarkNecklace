@@ -63,7 +63,7 @@ public class armaItem : MonoBehaviour {
             }
             if(semGrana == true)
             {
-                GUI.Label(new Rect(a, b, c, d), "sem moedas suficiente");
+                GUI.Label(new Rect(Screen.height / 1.2f, Screen.width / 3 - 50, 100, 100), "sem moedas suficiente");
             }
         }
     }

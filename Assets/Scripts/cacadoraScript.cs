@@ -216,7 +216,7 @@ public class cacadoraScript : MonoBehaviour {
 	{
 		if (Input.GetButtonDown("Fire3") && estaNoChao && vigor>=1 && dash == false&&dead==false&& invencibilidade <= 0) {
 			dash = true;
-           PlaySingle(dash1, 1.4f);
+           PlaySingle(dash1, 1.3f);
             anim.SetBool ("esquiva", true);
 			if (direita==true) {
 				rbd.velocity=new Vector2(esquiva,rbd.velocity.y);
@@ -418,7 +418,7 @@ public class cacadoraScript : MonoBehaviour {
 
 	IEnumerator morreu()
 	{
-		yield return new WaitForSeconds(1.2f);
+		yield return new WaitForSeconds(1.1f);
 		//anim.SetBool ("movendo", false);
 		anim.SetBool ("morreu",true);
 		dead = true;
@@ -439,7 +439,7 @@ public class cacadoraScript : MonoBehaviour {
         { 
          
                 rbd.velocity = new Vector2(knockPwr, rbd.velocity.y);
-         PlaySingle(die1, 1.4f);
+         PlaySingle(die1, 1.3f);
             //encostouDir = false;
         }
     }
@@ -450,7 +450,7 @@ public class cacadoraScript : MonoBehaviour {
         {
 
             rbd.velocity = new Vector2(-knockPwr, rbd.velocity.y);
-         PlaySingle(die1, 1.4f);
+         PlaySingle(die1, 1.3f);
 
             //encostouDir = false;
         }
