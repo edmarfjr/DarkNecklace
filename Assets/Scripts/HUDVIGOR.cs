@@ -7,8 +7,9 @@ public class HUDVIGOR : MonoBehaviour {
 	public GameObject BarraVigor;
     public GameObject barra;
     public float tamanhoVigor;
-	// Use this for initialization
-	void Start () {
+    public GameObject barraFundo;
+    // Use this for initialization
+    void Start () {
 		GameObject aux = GameObject.FindWithTag("Player");
 		player = aux;
 	}
@@ -18,20 +19,24 @@ public class HUDVIGOR : MonoBehaviour {
 		cacadoraScript script = player.GetComponent<cacadoraScript> ();
 		float MAX = script.vigorMax;
 		float Atual = script.vigor;
-		tamanhoVigor = (Atual/MAX) ;
+		tamanhoVigor = (Atual/10) ;
 
 		Vector2 temp =BarraVigor.transform.localScale;
         if (script.vigor>=0)
 		    temp = new Vector2 (tamanhoVigor,1f);
         else
-            temp = new Vector2(0 * 1.8f, 1f);
+            temp = new Vector2((MAX / 10) * 1f, 1f);
         BarraVigor.transform.localScale = temp;
 
         Vector2 temp2 = barra.transform.localScale;
         if (script.vigor >= 0)
-            temp2 = new Vector2((script.vigorMax/10) * 1f, 1f);
+            temp2 = new Vector2((MAX / 10) * 1f, 1f);
         barra.transform.localScale = temp2;
 
+        Vector2 temp3 = barraFundo.transform.localScale;
+        if (script.vigor >= 0)
+            temp3 = new Vector2((MAX / 10) * 1f, 1f);
+        barraFundo.transform.localScale = temp3;
 
     }
 }

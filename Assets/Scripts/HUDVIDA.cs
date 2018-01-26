@@ -19,7 +19,7 @@ public class HUDVIDA : MonoBehaviour {
 		cacadoraScript script = player.GetComponent<cacadoraScript> ();
 		float MAX = script.vidaMax;
 		float Atual = script.vida;
-		tamanhoVida = (Atual/MAX) ;
+		tamanhoVida = (Atual/10) ;
 
 
 
@@ -32,13 +32,13 @@ public class HUDVIDA : MonoBehaviour {
 
         Vector2 temp2 = barra.transform.localScale;
         if (script.vida >= 0)
-            temp2 = new Vector2((script.vidaMax/10) * 1f, 1f);
+            temp2 = new Vector2((MAX/10) * 1f, 1f);
         barra.transform.localScale = temp2;
 
         Vector2 temp3 = barraFundo.transform.localScale;
         if (script.vida >= 0)
-            temp3 = new Vector2((script.vidaMax / 10) * 1f, 1f);
-        barra.transform.localScale = temp3;
+            temp3 = new Vector2((MAX / 10) * 1f, 1f);
+        barraFundo.transform.localScale = temp3;
 
     }
 }

@@ -22,6 +22,7 @@ public class Teleport : MonoBehaviour {
     public float limiteSpawn;
     public float auxlimite;
     public bool boss;
+    public int fase;
   
     // Use this for initialization
     void Start () {
@@ -52,12 +53,24 @@ public class Teleport : MonoBehaviour {
         }
         if (toqueTele && checa.Nini == 0 && loja == false && boss == true)
         {
-            Bearman scr = bossObj.gameObject.GetComponent<Bearman>();
-            scr.ativo = true;
+            if (fase == 1)
+            {
+                Bearman scr = bossObj.gameObject.GetComponent<Bearman>();
+                scr.ativo = true;
 
-            PC.transform.position = new Vector3(spawn.transform.position.x, spawn.transform.position.y, PC.transform.position.z);
-            cacadoraScript scriPC = PC.GetComponent<cacadoraScript>();
-            scriPC.vigor = scriPC.vigorMax - 1;
+                PC.transform.position = new Vector3(spawn.transform.position.x, spawn.transform.position.y, PC.transform.position.z);
+                cacadoraScript scriPC = PC.GetComponent<cacadoraScript>();
+                scriPC.vigor = scriPC.vigorMax - 1;
+            }
+            if (fase == 2)
+            {
+                golemBoss scr = bossObj.gameObject.GetComponent<golemBoss>();
+                scr.ativo = true;
+
+                PC.transform.position = new Vector3(spawn.transform.position.x, spawn.transform.position.y, PC.transform.position.z);
+                cacadoraScript scriPC = PC.GetComponent<cacadoraScript>();
+                scriPC.vigor = scriPC.vigorMax - 1;
+            }
         }
     }
 
