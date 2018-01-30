@@ -29,5 +29,9 @@ public class inventarioItem : MonoBehaviour {
         {
             invent.sprite = item[2];
         }
+        if (scriPC.itemTipo == "bombaIncend")
+        {
+            invent.sprite = item[3];
+        }
     }
 }
