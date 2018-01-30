@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PC: {fileID: 0}
-  dano: 1
+  dano: 2
   rbd: {fileID: 50262109083590068}
 --- !u!114 &114368089110813836
 MonoBehaviour:

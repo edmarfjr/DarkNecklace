@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityStandardAssets.CrossPlatformInput;
 
 public class cacadoraScript : MonoBehaviour {
-    public GameObject itemArremeco;
+    public GameObject[] itemArremeco;
     public Transform posiItemArremeco;
 	public GameObject encostouIni;
 	public GameObject pe;
@@ -58,6 +58,9 @@ public class cacadoraScript : MonoBehaviour {
     public AudioSource sfxSource;
     public float lovPitchRange;
     public float highPitchRange;
+    public int armadura;
+    public int bonusAtaque;
+    public int escudoDivino;
 
     // Use this for initialization
     void Start () {
@@ -76,7 +79,7 @@ public class cacadoraScript : MonoBehaviour {
 		dash = false;
 		vigor = vigorMax;
 		direita = true;
-		velocidade = 7;
+		velocidade = gs.velocidade;
 		pulo = 5;
 		esquiva = 10; 
 		timer = 0;
@@ -85,6 +88,8 @@ public class cacadoraScript : MonoBehaviour {
         andasom = false;
         municao = gs.muni;
         moedas = gs.moedas;
+        armadura = gs.armadura;
+        bonusAtaque = gs.bonusAtaque;
 	}
 
 	// Update is called once per frame
@@ -274,7 +279,39 @@ public class cacadoraScript : MonoBehaviour {
                 municao -= 1;
             }
         }
-            if (itemTipo == "lancaMagi")
+        if (itemTipo == "pistola")
+        {
+            if (Input.GetButtonDown("Fire2") && atacou == false && vigor > 0 && dead == false && municao > 0 && estaNoChao)
+            {
+                // vigor -= 2;
+                PlaySingle(ataca1, 1.4f);
+                atacou = true;
+                anim.SetBool("pistola", true);
+                yield return new WaitForSeconds(0.2f);
+                criaItem();
+                yield return new WaitForSeconds(0.6f);
+                anim.SetBool("pistola", false);
+                atacou = false;
+                municao -= 1;
+            }
+        }
+        if (itemTipo == "bombaIncend")
+        {
+            if (Input.GetButtonDown("Fire2") && atacou == false && vigor > 0 && dead == false && municao > 0 && estaNoChao)
+            {
+                // vigor -= 2;
+                PlaySingle(ataca1, 1.4f);
+                atacou = true;
+                anim.SetBool("bombaIncend", true);
+                yield return new WaitForSeconds(0.2f);
+                criaItem();
+                yield return new WaitForSeconds(0.3f);
+                anim.SetBool("bombaIncend", false);
+                atacou = false;
+                municao -= 1;
+            }
+        }
+        if (itemTipo == "lancaMagi")
             {
                 if (Input.GetButtonDown("Fire2") && atacou == false && vigor > 0 && dead == false && municao > 0 && estaNoChao)
                 {
@@ -487,8 +524,21 @@ public class cacadoraScript : MonoBehaviour {
     }
     void criaItem()
     {
-        GameObject cloneItem = Instantiate(itemArremeco, new Vector2(posiItemArremeco.position.x, posiItemArremeco.position.y), Quaternion.identity);
-        cloneItem.transform.localScale = this.transform.localScale;
+        if(itemTipo=="facaArremeco")
+        {
+            GameObject cloneItem = Instantiate(itemArremeco[0], new Vector2(posiItemArremeco.position.x, posiItemArremeco.position.y), Quaternion.identity);
+            cloneItem.transform.localScale = this.transform.localScale;
+        }
+        if (itemTipo == "pistola")
+        {
+            GameObject cloneItem = Instantiate(itemArremeco[1], new Vector2(posiItemArremeco.position.x, posiItemArremeco.position.y), Quaternion.identity);
+            cloneItem.transform.localScale = this.transform.localScale;
+        }
+        if (itemTipo == "bombaIncend")
+        {
+            GameObject cloneItem = Instantiate(itemArremeco[2], new Vector2(posiItemArremeco.position.x, posiItemArremeco.position.y), Quaternion.identity);
+            cloneItem.transform.localScale = this.transform.localScale;
+        }
     }
 
     public void PlaySingle(AudioClip clip, float aux)

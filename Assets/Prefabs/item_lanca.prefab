@@ -79,10 +79,11 @@ MonoBehaviour:
   b: 0
   c: 0
   d: 0
-  texto: 'APERTE `A` PARA COMPRAR '
+  texto: 'APERTE `CIMA` PARA COMPRAR '
   armaTipo: lanca
   preco: 15
   semGrana: 0
+  arremeco: 0
 --- !u!212 &212951803569999468
 SpriteRenderer:
   m_ObjectHideFlags: 1

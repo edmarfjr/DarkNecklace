@@ -160,7 +160,7 @@ MonoBehaviour:
   b: 0
   c: 0
   d: 0
-  texto: 'APERTE `A` PARA COMPRAR '
+  texto: 'APERTE `CIMA` PARA COMPRAR '
   preco: 10
   semGrana: 0
   bebeu: {fileID: 8300000, guid: 77570ced2ffae5f419181a1a3606868e, type: 3}

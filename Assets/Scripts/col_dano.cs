@@ -35,11 +35,18 @@ public class col_dano : MonoBehaviour {
 		
 	} */
     public void levaDano(int x)
-	{	
-		
-		cacadoraScript script = player.GetComponent<cacadoraScript> ();
-		script.vida -= 1;
-        script.invencibilidade = 0.7f;
-
-    }  
+	{
+        cacadoraScript script = player.GetComponent<cacadoraScript>();
+       // if(script.escudoDivino>0)
+        if (script.armadura>0)
+        {
+           script.armadura -= x;
+           script.invencibilidade = 0.7f;
+        }
+        if (script.armadura == 0)
+        {
+            script.vida -= x;
+            script.invencibilidade = 0.7f;
+        }
+	}  
 }

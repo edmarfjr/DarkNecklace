@@ -14,6 +14,7 @@ public class armaItem : MonoBehaviour {
     public string armaTipo;
     public int preco;
     public bool semGrana;
+    public bool arremeco;
     // Use this for initialization
     void Start () {
         GameObject aux = GameObject.FindWithTag("Player");
@@ -32,8 +33,10 @@ public class armaItem : MonoBehaviour {
             {
                 semGrana = false;
             }
-                if (Input.GetKeyDown(KeyCode.A))
+            float x = Input.GetAxis("Vertical");
+            if (x > 0.5)
             {
+                Debug.Log(x);
                 if(scriPC.moedas<preco)
                 {
                     semGrana = true;
@@ -41,7 +44,14 @@ public class armaItem : MonoBehaviour {
                 else
                 {
                     scriPC.moedas -= preco;
-                    scriPC.armaTipo = armaTipo;
+                    if (arremeco)
+                    {
+                        scriPC.itemTipo = armaTipo;
+                    }
+                    else
+                    {
+                        scriPC.armaTipo = armaTipo;
+                    }
                     Destroy(this.gameObject);
                 }
             }

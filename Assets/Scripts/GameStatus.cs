@@ -5,12 +5,18 @@ using UnityEngine;
 public class GameStatus : MonoBehaviour {
     public int vida;
     public int vigor;
+    public int armadura;
+    public int bonusAtaque;
+    public float velocidade;
     public string armaTipo;
     public string itemTipo;
     public int muni;
     public int moedas;
 	// Use this for initialization
 	void Start () {
+        armadura = 0;
+        bonusAtaque = 0;
+        velocidade = 7;
         vida = 10;
         vigor = 10;
         armaTipo = "espadaCurta";
@@ -35,6 +41,9 @@ public class GameStatus : MonoBehaviour {
         itemTipo = scrPc.itemTipo;
         muni = scrPc.municao;
         moedas = scrPc.moedas;
+        armadura = scrPc.armadura;
+        bonusAtaque = scrPc.bonusAtaque;
+        velocidade = scrPc.velocidade;
     }
 
     public void zeraStatus()

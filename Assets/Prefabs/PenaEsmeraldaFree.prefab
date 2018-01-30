@@ -79,9 +79,10 @@ MonoBehaviour:
   b: 0
   c: 0
   d: 0
-  texto: APERTE `A` PARA PEGAR
+  texto: APERTE `CIMA` PARA PEGAR
   preco: 0
   semGrana: 0
+  comprou: 0
 --- !u!212 &212231152681638308
 SpriteRenderer:
   m_ObjectHideFlags: 1

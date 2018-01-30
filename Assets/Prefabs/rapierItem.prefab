@@ -79,10 +79,11 @@ MonoBehaviour:
   b: 0
   c: 0
   d: 0
-  texto: 'APERTE `A` PARA COMPRAR '
+  texto: 'APERTE `CIMA` PARA COMPRAR '
   armaTipo: rapier
   preco: 25
   semGrana: 0
+  arremeco: 0
 --- !u!212 &212480014886683222
 SpriteRenderer:
   m_ObjectHideFlags: 1

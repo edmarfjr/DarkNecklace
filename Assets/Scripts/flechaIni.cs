@@ -50,8 +50,16 @@ public class flechaIni : MonoBehaviour {
     {
 
         cacadoraScript script = PC.GetComponent<cacadoraScript>();
-        script.vida -= dano;
-        script.invencibilidade = 1;
+        if (script.armadura > 0)
+        {
+            script.armadura -= x;
+            script.invencibilidade = 0.7f;
+        }
+        if (script.armadura == 0)
+        {
+            script.vida -= x;
+            script.invencibilidade = 0.7f;
+        }
 
     }
 

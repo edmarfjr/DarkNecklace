@@ -44,11 +44,17 @@ public class ataqueRat : MonoBehaviour {
     }
     public void levaDano(int x)
     {
-
-        cacadoraScript script = PC.GetComponent<cacadoraScript>();
-        script.vida -= dano;
-        script.invencibilidade = 1;
-
+    cacadoraScript script = PC.GetComponent<cacadoraScript>();
+        if (script.armadura > 0)
+        {
+            script.armadura -= x;
+            script.invencibilidade = 0.7f;
+        }
+        if (script.armadura == 0)
+        {
+            script.vida -= x;
+            script.invencibilidade = 0.7f;
+        }
     }
 
    

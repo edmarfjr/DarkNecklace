@@ -101,7 +101,7 @@ public class Ratman : MonoBehaviour
     void alcanceAtaque()
     {
         if (arqueiro == false) {
-            if (Vector2.Distance(rbd.transform.position, PC.transform.position) < 1.6f && tempStag <= 0)
+            if (Vector2.Distance(rbd.transform.position, PC.transform.position) < 2f && tempStag <= 0)
             {
                 rbd.velocity = new Vector2(0, 0);
                 alcAtaq = true;

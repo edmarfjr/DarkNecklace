@@ -24,5 +24,9 @@ public class muniTipo : MonoBehaviour {
         {
             anim.SetTrigger("lancaMagi");
         }
+        if (scriPC.itemTipo == "pistola")
+        {
+            anim.SetTrigger("bala");
+        }
     }
 }

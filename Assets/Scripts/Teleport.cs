@@ -12,7 +12,9 @@ public class Teleport : MonoBehaviour {
     public GameObject vet1;
     public GameObject vet2;
     public GameObject[] vetIni;
-    public GameObject[] vetItens;
+    public GameObject[] vetArma;
+    public GameObject[] vetItem;
+    public GameObject[] vetUpgrade;
     public GameObject[] vetLoja;
     public bool loja;
     public Transform item1;
@@ -44,14 +46,14 @@ public class Teleport : MonoBehaviour {
             cacadoraScript scriPC = PC.GetComponent<cacadoraScript>();
             scriPC.vigor = scriPC.vigorMax-1;
         }
-        if (toqueTele && checa.Nini == 0 && loja == true && boss == false)
+        if (toqueTele && checa.Nini <= 0 && loja == true && boss == false)
         {
             respawnItem();
             PC.transform.position = new Vector3(spawn.transform.position.x, spawn.transform.position.y, PC.transform.position.z);
             cacadoraScript scriPC = PC.GetComponent<cacadoraScript>();
             scriPC.vigor = scriPC.vigorMax - 1;
         }
-        if (toqueTele && checa.Nini == 0 && loja == false && boss == true)
+        if (toqueTele && checa.Nini <= 0 && loja == false && boss == true)
         {
             if (fase == 1)
             {
@@ -174,63 +176,56 @@ public class Teleport : MonoBehaviour {
         for (int i = 0; i <= 2; i++)
         {
             int x = Random.Range(0, 100);
-            int aux = 0;
-            if(x<16)
+            int y = Random.Range(0, 100);
+            int z = Random.Range(0, 100);
+           if(x<25)
             {
-                vetLoja[i] = vetItens[0];
-                aux = 0;
+                vetLoja[0] = vetArma[0];
             }
-            if (x >= 16 && x <33)
+           if(x>=25&&x<50)
             {
-                vetLoja[i] = vetItens[1];
-                aux = 1;
+                vetLoja[0] = vetArma[1];
             }
-            if (x >= 33 && x < 49)
+            if (x >= 50 && x < 75)
             {
-                vetLoja[i] = vetItens[2];
-                aux = 2;
+                vetLoja[0] = vetArma[2];
             }
-            if (x >= 49 && x < 65)
+            if(x>=75)
             {
-                vetLoja[i] = vetItens[3];
-                aux = 3;
+                vetLoja[0] = vetArma[3];
             }
-            if (x >= 65 && x < 81)
+            if (y < 25)
             {
-                vetLoja[i] = vetItens[4];
-                aux = 4;
+                vetLoja[1] = vetItem[0];
             }
-            if (x >= 81)
+            if (y >= 25 && x < 50)
             {
-                vetLoja[i] = vetItens[5];
-                aux = 5;
+                vetLoja[1] = vetItem[1];
             }
-            if(vetLoja[1]==vetLoja[0])
+            if (y >= 50 && x < 75)
             {
-                if(aux<5)
-                    vetLoja[i] = vetItens[aux + 1];
-                if(aux<=0)
-                    vetLoja[i] = vetItens[aux + 1];
-                if(aux==5)
-                    vetLoja[i] = vetItens[aux - 1];
+                vetLoja[1] = vetItem[2];
             }
-            if (vetLoja[2] == vetLoja[1])
+            if (y >= 75)
             {
-                if(aux<3)
-                    vetLoja[i] = vetItens[aux + 2];
-                if(aux==4)
-                    vetLoja[i] = vetItens[aux - 2];
-                else
-                    vetLoja[i] = vetItens[aux + 1];
-            }       
-            if (vetLoja[2] == vetLoja[0])
-            {
-                if (aux < 3)
-                    vetLoja[i] = vetItens[aux + 2];
-                else
-                    vetLoja[i] = vetItens[aux + 1];
+                vetLoja[1] = vetItem[3];
             }
-            
+            if (z < 25)
+            {
+                vetLoja[2] = vetUpgrade[0];
+            }
+            if (z >= 25 && x < 50)
+            {
+                vetLoja[2] = vetUpgrade[1];
+            }
+            if (z >= 50 && x < 75)
+            {
+                vetLoja[2] = vetUpgrade[2];
+            }
+            if (z >= 75)
+            {
+                vetLoja[2] = vetUpgrade[3];
+            }
         }
         
         Vector3 pos1 = new Vector3(item1.position.x, item1.position.y, -0.5f);

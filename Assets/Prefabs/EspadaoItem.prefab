@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1762261908722326}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.77537, y: -15.458965, z: 0}
+  m_LocalPosition: {x: -34.30016, y: -11.072143, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,10 +79,11 @@ MonoBehaviour:
   b: 0
   c: 0
   d: 0
-  texto: 'APERTE `A` PARA COMPRAR '
+  texto: 'APERTE ''CIMA'' PARA COMPRAR '
   armaTipo: espadao
   preco: 20
   semGrana: 0
+  arremeco: 0
 --- !u!212 &212253606274919662
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -117,7 +118,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c34161376076ded42a4a6bd2aeb3c996, type: 3}
+  m_Sprite: {fileID: 21300024, guid: 85280992919762949babc19e9b7ffbc1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

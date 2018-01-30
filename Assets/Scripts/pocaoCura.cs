@@ -35,7 +35,8 @@ public class pocaoCura : MonoBehaviour {
             {
                 semGrana = false;
             }
-            if (Input.GetKeyDown(KeyCode.A))
+            float x = Input.GetAxis("Vertical");
+            if (x > 0.5)
             {
                 if (scriPC.moedas < preco)
                 {

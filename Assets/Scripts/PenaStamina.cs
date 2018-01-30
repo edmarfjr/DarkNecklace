@@ -14,6 +14,7 @@ public class PenaStamina : MonoBehaviour
     public string texto;
     public int preco;
     public bool semGrana;
+    public bool comprou;
     // Use this for initialization
     void Start()
     {
@@ -34,18 +35,20 @@ public class PenaStamina : MonoBehaviour
             {
                 semGrana = false;
             }
-            if (Input.GetKeyDown(KeyCode.A))
+            float x = Input.GetAxis("Vertical");
+            if (x > 0.5)
             {
                 if (scriPC.moedas < preco)
                 {
                     semGrana = true;
                 }
-                else
+                if (scriPC.moedas >= preco && comprou == false)
                 {
                     scriPC.moedas -= preco;
                     scriPC.vigorMax += 3;
                     scriPC.vigor += 3;
-                    Destroy(this.gameObject);
+                    comprou = true;
+                    Destroy(this.gameObject,2f);
                 }
             }
         }
@@ -59,7 +62,7 @@ public class PenaStamina : MonoBehaviour
     {
         if (abriu == true)
         {
-            if (semGrana == false)
+            if (semGrana == false && comprou == false)
             {
                 GUI.Label(new Rect(Screen.height / 1.2f, Screen.width / 3 - 50, 100, 100), texto);
                 GUI.Label(new Rect(Screen.height / 1.2f, Screen.width / 3, 100, 100), preco.ToString());
@@ -67,6 +70,10 @@ public class PenaStamina : MonoBehaviour
             if (semGrana == true)
             {
                 GUI.Label(new Rect(Screen.height / 1.2f, Screen.width / 3 - 50, 100, 100), "sem moedas suficiente");
+            }
+            if (comprou == true)
+            {
+                GUI.Label(new Rect(Screen.height / 1.2f, Screen.width / 3 - 50, 100, 100), "VIGOR ALMENTADO");
             }
         }
     }

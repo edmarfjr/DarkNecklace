@@ -7,6 +7,8 @@ public class HUDVIDA : MonoBehaviour {
 	public GameObject BarraVida;
     public GameObject barra;
     public GameObject barraFundo;
+    public GameObject armadura;
+    public float tamanhoArmor;
 	public float tamanhoVida;
 	// Use this for initialization
 	void Start () {
@@ -19,6 +21,8 @@ public class HUDVIDA : MonoBehaviour {
 		cacadoraScript script = player.GetComponent<cacadoraScript> ();
 		float MAX = script.vidaMax;
 		float Atual = script.vida;
+        float armor = script.armadura-1;
+        tamanhoArmor = (armor / MAX);
 		tamanhoVida = (Atual/10) ;
 
 
@@ -29,6 +33,13 @@ public class HUDVIDA : MonoBehaviour {
         else
             temp = new Vector2(0, 0.1f);
         BarraVida.transform.localScale = temp;
+
+        Vector2 temp4 = armadura.transform.localScale;
+        if (script.armadura > 0)
+            temp4 = new Vector2(tamanhoArmor, 1f);
+        if (script.armadura <= 0)
+            temp4 = new Vector2(0, 0f);
+        armadura.transform.localScale = temp4;
 
         Vector2 temp2 = barra.transform.localScale;
         if (script.vida >= 0)

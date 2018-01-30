@@ -1,0 +1,289 @@
+fileFormatVersion: 2
+guid: ff5d1d794561c13459d595dd0efbd171
+timeCreated: 1517225880
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: armaBombaIncendiaria_0
+    21300002: armaBombaIncendiaria_1
+    21300004: armaBombaIncendiaria_2
+    21300006: armaBombaIncendiaria_3
+    21300008: armaBombaIncendiaria_4
+    21300010: armaBombaIncendiaria_5
+    21300012: armaBombaIncendiaria_6
+    21300014: armaBombaIncendiaria_7
+    21300016: armaBombaIncendiaria_8
+    21300018: armaBombaIncendiaria_9
+    21300020: armaBombaIncendiaria_10
+    21300022: armaBombaIncendiaria_11
+    21300024: armaBombaIncendiaria_12
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: armaBombaIncendiaria_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2106
+        width: 324
+        height: 351
+      alignment: 9
+      pivot: {x: 0.4198146, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: armaBombaIncendiaria_1
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 2106
+        width: 324
+        height: 351
+      alignment: 9
+      pivot: {x: 0.4198146, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: armaBombaIncendiaria_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1755
+        width: 324
+        height: 351
+      alignment: 9
+      pivot: {x: 0.4198146, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: armaBombaIncendiaria_3
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1880
+        width: 66
+        height: 147
+      alignment: 9
+      pivot: {x: 0.4198146, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: armaBombaIncendiaria_4
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 1527
+        width: 66
+        height: 147
+      alignment: 9
+      pivot: {x: 0.4198146, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: armaBombaIncendiaria_5
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1528
+        width: 66
+        height: 147
+      alignment: 9
+      pivot: {x: 0.4198146, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: armaBombaIncendiaria_6
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 1223
+        width: 155
+        height: 76
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: armaBombaIncendiaria_7
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 1223
+        width: 155
+        height: 76
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: armaBombaIncendiaria_8
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 872
+        width: 155
+        height: 76
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: armaBombaIncendiaria_9
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 702
+        width: 324
+        height: 351
+      alignment: 9
+      pivot: {x: 0.4198146, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: armaBombaIncendiaria_10
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 449
+        width: 137
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: armaBombaIncendiaria_11
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 449
+        width: 137
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: armaBombaIncendiaria_12
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 99
+        width: 137
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

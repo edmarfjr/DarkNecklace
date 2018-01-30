@@ -77,7 +77,7 @@ public class morcego : MonoBehaviour
                 morreu = true;
                 ChecaIni checa = checaini.GetComponent<ChecaIni>();
                 checa.morreuUm();
-                anim.SetTrigger("morreu");
+                //anim.SetTrigger("morreu");
                 drop();
                 Destroy(this.gameObject, 0.7f);
             }

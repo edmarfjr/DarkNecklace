@@ -79,10 +79,11 @@ MonoBehaviour:
   b: 0
   c: 0
   d: 0
-  texto: APERTE `A` PARA PEGAR
+  texto: APERTE `CIMA` PARA PEGAR
   armaTipo: machado
   preco: 0
   semGrana: 0
+  arremeco: 0
 --- !u!212 &212315407574067310
 SpriteRenderer:
   m_ObjectHideFlags: 1

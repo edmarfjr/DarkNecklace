@@ -79,10 +79,11 @@ MonoBehaviour:
   b: 0
   c: 0
   d: 0
-  texto: 'APERTE `A` PARA COMPRAR '
+  texto: 'APERTE `CIMA` PARA COMPRAR '
   armaTipo: machado
   preco: 22
   semGrana: 0
+  arremeco: 0
 --- !u!212 &212597417989690338
 SpriteRenderer:
   m_ObjectHideFlags: 1

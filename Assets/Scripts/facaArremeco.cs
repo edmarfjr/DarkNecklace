@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class facaArremeco : MonoBehaviour {
-    public Vector2 velocidade = new Vector2(10,0);
+    public Vector2 velocidade;
+    public bool tiro;
     Rigidbody2D faca;
 
     // Use this for initialization
@@ -23,6 +24,7 @@ public class facaArremeco : MonoBehaviour {
     {
         if (col.tag.Equals("inimigo"))
         {
+            if(!tiro)
             Destroy(gameObject);
         }
 

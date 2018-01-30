@@ -22,7 +22,11 @@ public class itemArremeco : MonoBehaviour {
             dano = 2;
             knockback = 0.2f;
         }
-
+        if (scriPC.itemTipo == "pistola")
+        {
+            dano = 2;
+            knockback = 0.5f;
+        }
 
 
     }

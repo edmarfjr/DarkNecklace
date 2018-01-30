@@ -17,32 +17,32 @@ public class Arma : MonoBehaviour {
         cacadoraScript scriPC = PC.GetComponent<cacadoraScript>();
         if (scriPC.armaTipo == "espadaCurta")
         {
-            dano = 2;
+            dano = scriPC.bonusAtaque+2;
             knockback = 1f;
         }
         if (scriPC.armaTipo == "adaga")
         {
-            dano = 1;
+            dano = scriPC.bonusAtaque + 1;
             knockback = 0.5f;
         }
         if (scriPC.armaTipo == "machado")
         {
-            dano = 4;
+            dano = scriPC.bonusAtaque + 4;
             knockback = 1.3f;
         }
         if (scriPC.armaTipo == "espadao")
         {
-            dano = 3;
+            dano = scriPC.bonusAtaque + 3;
             knockback = 1.3f;
         }
         if (scriPC.armaTipo == "lanca")
         {
-            dano = 2;
+            dano = scriPC.bonusAtaque + 2;
             knockback = 1.2f;
         }
         if (scriPC.armaTipo == "rapier")
         {
-            dano = 2;
+            dano = scriPC.bonusAtaque + 2;
             knockback = 0.9f;
         }
 

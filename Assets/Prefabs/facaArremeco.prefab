@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114424160296189264}
   - component: {fileID: 50434844058231876}
   - component: {fileID: 114650181282385270}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: facaArremeco
   m_TagString: itemArremeco
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1287651367463280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.25, y: -15.851676, z: -1}
+  m_LocalPosition: {x: -19.5402, y: -13.684429, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -118,7 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a0a2d07a1a0f2b408257268997ca01a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: {x: 30, y: 0}
+  velocidade: {x: 10, y: 0}
+  tiro: 0
 --- !u!114 &114650181282385270
 MonoBehaviour:
   m_ObjectHideFlags: 1

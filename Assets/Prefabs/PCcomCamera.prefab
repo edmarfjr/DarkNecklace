@@ -251,7 +251,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1804594085440946}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.59999776, y: -4.3099985, z: 9}
+  m_LocalPosition: {x: 0.37, y: -4.3099985, z: 9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4172325423161470}
@@ -271,7 +271,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1272943269232482}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23.89, y: -12.9, z: -10}
+  m_LocalPosition: {x: -22.36, y: -12.92, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4877405655179368}
@@ -630,8 +630,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f54066d981e5494aaba42a8059be718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemArremeco: {fileID: 1287651367463280, guid: dcebffdb67314fc40a91ea7e33d38b85,
-    type: 2}
+  itemArremeco:
+  - {fileID: 1287651367463280, guid: dcebffdb67314fc40a91ea7e33d38b85, type: 2}
+  - {fileID: 1200773989441960, guid: 22c94074db4b5ff4ba390135e760e094, type: 2}
+  - {fileID: 1197027762564188, guid: 1e9b4c9e95db22943b434e6e3c8f6689, type: 2}
   posiItemArremeco: {fileID: 4911673000396604}
   encostouIni: {fileID: 1394041547596914}
   pe: {fileID: 1993746161154872}
@@ -685,6 +687,9 @@ MonoBehaviour:
   sfxSource: {fileID: 82341985068600756}
   lovPitchRange: 0.9
   highPitchRange: 1
+  armadura: 0
+  bonusAtaque: 0
+  escudoDivino: 0
 --- !u!114 &114923472729589042
 MonoBehaviour:
   m_ObjectHideFlags: 1

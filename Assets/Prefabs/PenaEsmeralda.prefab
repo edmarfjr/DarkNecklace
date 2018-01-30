@@ -79,9 +79,10 @@ MonoBehaviour:
   b: 0
   c: 0
   d: 0
-  texto: 'APERTE `A` PARA COMPRAR '
+  texto: 'APERTE `CIMA` PARA COMPRAR '
   preco: 20
   semGrana: 0
+  comprou: 0
 --- !u!212 &212864242852826934
 SpriteRenderer:
   m_ObjectHideFlags: 1
