@@ -31,6 +31,8 @@ public class Ratman : MonoBehaviour
     public AudioClip tiro;
     public AudioClip hit;
     public AudioSource sfxSource;
+    public bool armadura;
+    public bool alq;
 
     void Start()
     {
@@ -127,20 +129,57 @@ public class Ratman : MonoBehaviour
 
             }
         }
-        
+        if (alq == true)
+        {
+            if (Vector2.Distance(rbd.transform.position, PC.transform.position) < 8 && tempStag <= 0)
+            {
+                rbd.velocity = new Vector2(0, 0);
+                alcAtaq = true;
+
+            }
+            else
+            {
+                alcAtaq = false;
+
+            }
+        }
+
     }
 
     IEnumerator ataque()
     {
+        if (alcAtaq && esperAtaq <= 0 && tempStag <= 0 && alq == true)
+        {
+            rbd.velocity = new Vector2(0, 0);
+            atacando = true;
+            esperAtaq = 6;
+            anim.SetBool("atacando", true);
+            yield return new WaitForSeconds(0.7f);
+            PlaySingle(ataq, 1.2f);
+            criaFlecha();
+            yield return new WaitForSeconds(0.4f);
+            anim.SetBool("atacando", false);
+            atacando = false;
+
+        }
         if (alcAtaq&&esperAtaq<=0&&tempStag<=0 && arqueiro==false)
         {
             rbd.velocity = new Vector2(0, 0);
             atacando = true;
             PlaySingle(ataq, 1.2f);
-            esperAtaq = 1;
-            anim.SetBool("atacando", true);
-            yield return new WaitForSeconds(0.8f);
-            anim.SetBool("atacando", false);
+            esperAtaq = 2;
+            if(armadura)
+            {
+                anim.SetBool("atacando", true);
+                yield return new WaitForSeconds(1.3f);
+                anim.SetBool("atacando", false);
+            }
+            else
+            {
+                anim.SetBool("atacando", true);
+                yield return new WaitForSeconds(0.8f);
+                anim.SetBool("atacando", false);
+            }
             atacando = false;
             
         }
@@ -148,13 +187,27 @@ public class Ratman : MonoBehaviour
         {
             atacando = true;
             
-            esperAtaq = 5;
-            anim.SetBool("atirando", true);
-            yield return new WaitForSeconds(0.2f);
-            PlaySingle(tiro, 1f);
-            yield return new WaitForSeconds(0.6f);
-            criaFlecha();
-            anim.SetBool("atirando", false);
+            esperAtaq = 4;
+            if(armadura)
+            {
+                anim.SetBool("atirando", true);
+                yield return new WaitForSeconds(0.7f);
+                PlaySingle(tiro, 1f);
+                criaFlecha();
+                yield return new WaitForSeconds(0.3f);
+                
+                anim.SetBool("atirando", false);
+            }
+            else
+            {
+                anim.SetBool("atirando", true);
+                yield return new WaitForSeconds(0.2f);
+                PlaySingle(tiro, 1f);
+                yield return new WaitForSeconds(0.6f);
+                criaFlecha();
+                anim.SetBool("atirando", false);
+            }
+            
            
             atacando = false;       
         }
@@ -163,21 +216,36 @@ public class Ratman : MonoBehaviour
 
     public void tomouDano(int x, float kb)
     {
-        Debug.Log("MORRE RATO");
-        tempStag = 1f;
-        PlaySingle(hit, 1f);
-        anim.SetTrigger("golpeado");
-        if (PC.transform.position.x>rbd.position.x)
-            rbd.velocity = new Vector2(-4*kb, 1);
-        if (PC.transform.position.x < rbd.position.x)
-            rbd.velocity = new Vector2(4*kb, 1);
-       
-        vida = vida - x;
-        
+        if(!armadura)
+        {
+            tempStag = 1f;
+            PlaySingle(hit, 1f);
+            anim.SetTrigger("golpeado");
+            PlaySingle(hit, 1f);
+            StartCoroutine(piscaCor());
+            if (PC.transform.position.x > rbd.position.x)
+                rbd.velocity = new Vector2(-4 * kb, 1);
+            if (PC.transform.position.x < rbd.position.x)
+                rbd.velocity = new Vector2(4 * kb, 1);
+        }
+        if(armadura)
+        {
+            PlaySingle(hit, 1f);
+            StartCoroutine(piscaCor());
+        }
+         vida = vida - x;
+     }
 
+    IEnumerator piscaCor()
+    {
+        GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<SpriteRenderer>().color = Color.white;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
-    
-
     void morrer()
     {
 

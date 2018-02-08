@@ -16,6 +16,7 @@ public class cacadoraScript : MonoBehaviour {
 	public bool atacou;
 	public float timer;
 	public float velocidade;
+    public float velAnda;
 	public float pulo;
 	public float esquiva;
 	public int vidaMax;
@@ -61,6 +62,8 @@ public class cacadoraScript : MonoBehaviour {
     public int armadura;
     public int bonusAtaque;
     public int escudoDivino;
+    public bool andaDir;
+    public bool bloq;
 
     // Use this for initialization
     void Start () {
@@ -80,6 +83,7 @@ public class cacadoraScript : MonoBehaviour {
 		vigor = vigorMax;
 		direita = true;
 		velocidade = gs.velocidade;
+        velAnda = velocidade;
 		pulo = 5;
 		esquiva = 10; 
 		timer = 0;
@@ -163,11 +167,11 @@ public class cacadoraScript : MonoBehaviour {
 
 		
 
-	}	
+	}
 
-   
 
-	void Andar ()
+
+    void Andar ()
 	{	if (andasom == true && somAndaTemp<=0 && estaNoChao&&!dash)
         {
           RandomsizeSdx(moveSound1);
@@ -177,8 +181,20 @@ public class cacadoraScript : MonoBehaviour {
 			
 			if (invencibilidade <= 0) {
                 x = Input.GetAxis("Horizontal");
-               // x = CrossPlatformInputManager.GetAxis("Horizontal");
-                rbd.velocity = new Vector2 (x * velocidade, rbd.velocity.y);
+                if(x>0)
+                { andaDir = true; }
+                if (x <= 0)
+                { andaDir = false; }
+                // x = CrossPlatformInputManager.GetAxis("Horizontal");
+                if(bloq)
+                {
+                    rbd.velocity = new Vector2(0, rbd.velocity.y);
+                }
+                if(!bloq)
+                {
+                    rbd.velocity = new Vector2(x * velAnda, rbd.velocity.y);
+                }
+               
                
             } else {
                 x = 0;
@@ -208,8 +224,42 @@ public class cacadoraScript : MonoBehaviour {
 		rbd.velocity = new Vector2 (0, rbd.velocity.y);
 		}
 	}
-
-	void Pular()
+    
+    void OnCollision2D(Collision2D coll)
+    {
+        gStatus = GameObject.FindGameObjectWithTag("gameStatus");
+        GameStatus gs = gStatus.GetComponent<GameStatus>();
+        int dire = 0;
+        if (this.transform.position.x > coll.transform.position.x)
+        {
+            dire = 1;
+        }
+        else
+        {
+            dire = -1;
+        }
+        if (coll.gameObject.tag == "inimigo" && dire == 1 && andaDir == false)
+        {
+            bloq = true;
+            Debug.Log(bloq);
+        }
+        if (coll.gameObject.tag == "inimigo" && dire == 1 && andaDir == true)
+        {
+            bloq = false;
+            Debug.Log(bloq);
+        }
+        if (coll.gameObject.tag == "inimigo" && dire == -1 && andaDir == true)
+        {
+            bloq = true;
+            Debug.Log(bloq);
+        }
+        if (coll.gameObject.tag == "inimigo" && dire == -1 && andaDir == false)
+        {
+            bloq = false;
+            Debug.Log(bloq);
+        }
+    }
+    void Pular()
 	{
 		if (Input.GetButtonDown("Jump") && estaNoChao && !dash) {
 			rbd.velocity = new Vector2 (rbd.velocity.x, pulo);

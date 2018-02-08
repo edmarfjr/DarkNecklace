@@ -37,6 +37,7 @@ public class Bearman : MonoBehaviour
     public GameObject drop1;
     public GameObject drop2;
     public GameObject drop3;
+    public bool parede;
 
 
     // Use this for initialization
@@ -48,7 +49,6 @@ public class Bearman : MonoBehaviour
         anim = GetComponent<Animator>();
         PC = GameObject.FindGameObjectWithTag("Player");
         checaini = GameObject.FindGameObjectWithTag("checaIni");
-        morreu = false;
         vida = vidaMax;
         ativo = false;
     }
@@ -57,7 +57,14 @@ public class Bearman : MonoBehaviour
     void Update()
     {
         estaNoChao = Physics2D.Linecast(pe.transform.position, rbd.transform.position, 1 << LayerMask.NameToLayer("Piso"));
-       
+       if(!estaNoChao)
+        {
+            this.gameObject.layer = LayerMask.NameToLayer("inimigo_pulo");
+        }
+       if(estaNoChao)
+        {
+            this.gameObject.layer = LayerMask.NameToLayer("inimigo");
+        }
         if(ativo)
         {
             morrer();
@@ -82,15 +89,20 @@ public class Bearman : MonoBehaviour
                 StartCoroutine(andarTras());
                 if (esperAtaq1 <= 0)
                 { StartCoroutine(ataque1()); }
-
-
                 direcao();
             }
             
         }
         
     }
-    
+    private void OnTriggerEnter2D(Collider2D coll)
+    {
+        if(coll.gameObject.tag=="parede")
+        {
+            parede = true;
+        }
+       
+    }
     void direcao()
     {
         if (rbd.transform.position.x > PC.transform.position.x && atacando==false)
@@ -130,13 +142,30 @@ public class Bearman : MonoBehaviour
             coll.enabled = false;
             if (rbd.transform.position.x > PC.transform.position.x)
             {
-                rbd.velocity = new Vector2(vel*0.9f, rbd.velocity.y);
-                rbd.velocity = new Vector2(rbd.velocity.x, 7);
+                if(parede)
+                {
+                    rbd.velocity = new Vector2(-vel * 0.9f, rbd.velocity.y);
+                    rbd.velocity = new Vector2(rbd.velocity.x, 7);
+                }
+                else
+                {
+                    rbd.velocity = new Vector2(vel * 0.9f, rbd.velocity.y);
+                    rbd.velocity = new Vector2(rbd.velocity.x, 7);
+                }
+                
             }
             else
             {
-                rbd.velocity = new Vector2(-vel* 0.9f, rbd.velocity.y);
-                rbd.velocity = new Vector2(rbd.velocity.x, 7);
+                if (parede)
+                {
+                    rbd.velocity = new Vector2(vel * 0.9f, rbd.velocity.y);
+                    rbd.velocity = new Vector2(rbd.velocity.x, 7);
+                }
+                else
+                {
+                    rbd.velocity = new Vector2(-vel * 0.9f, rbd.velocity.y);
+                    rbd.velocity = new Vector2(rbd.velocity.x, 7);
+                }
             }
             andatras = false;
             coll.enabled = true;
@@ -174,6 +203,7 @@ public class Bearman : MonoBehaviour
     {
         if (esperAtaq1 <= 0 && !atacando && !andatras && estaNoChao&& Vector2.Distance(rbd.transform.position, PC.transform.position) < distAtaq1)
         {
+            parede = false;
             atacando = true;
             rbd.velocity = new Vector2(0, 0);           
             esperAtaq1 = 6f;
@@ -192,6 +222,7 @@ public class Bearman : MonoBehaviour
     {
         if(esperAtaq1<=0.5 && esperAtaq2<=0.5 && !andatras&&!atacando&&pulou && !andatras && estaNoChao)
         {
+            parede = false;
             atacando = true;
             anim.SetBool("ataq1", true);
             yield return new WaitForSeconds(1f);
@@ -208,25 +239,10 @@ public class Bearman : MonoBehaviour
         
     }
 
-    /*IEnumerator ataque3()
-    {
-
-    }
-    */
-
     public void tomouDano(int x, float kb)
     {
-        /*
-        anim.SetTrigger("golpeado");
-        if (PC.transform.position.x > rbd.position.x)
-            rbd.velocity = new Vector2(-4 * kb, 1);
-        if (PC.transform.position.x < rbd.position.x)
-            rbd.velocity = new Vector2(4 * kb, 1);
-        */
         StartCoroutine(piscaCor());
         vida = vida - x;
-
-
     }
     IEnumerator piscaCor()
     {
@@ -242,7 +258,6 @@ public class Bearman : MonoBehaviour
 
     void morrer()
     {
-
         if (!morreu)
         {
             if (vida <= 0&&estaNoChao)

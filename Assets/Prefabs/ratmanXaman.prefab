@@ -70,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1522351084382434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.911575, y: -17.108082, z: 0}
+  m_LocalPosition: {x: -33.39546, y: -11.272556, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4992271329326826}
@@ -192,10 +192,10 @@ MonoBehaviour:
   anim: {fileID: 0}
   agro: 0
   distAgro: 20
-  distAtaq: 0
+  distAtaq: 8
   alcAtaq: 0
   esperAtaq: 0
-  vida: 6
+  vida: 5
   atacando: 0
   golpeado: 0
   encostouDir: 0

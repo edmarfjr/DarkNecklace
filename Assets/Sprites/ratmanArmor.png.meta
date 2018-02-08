@@ -1,0 +1,364 @@
+fileFormatVersion: 2
+guid: 3edb6c149d69da8479be268bd01c5595
+timeCreated: 1517336317
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ratmanArmor_0
+    21300002: ratmanArmor_1
+    21300004: ratmanArmor_2
+    21300006: ratmanArmor_3
+    21300008: ratmanArmor_4
+    21300010: ratmanArmor_5
+    21300012: ratmanArmor_6
+    21300014: ratmanArmor_7
+    21300016: ratmanArmor_8
+    21300018: ratmanArmor_9
+    21300020: ratmanArmor_10
+    21300022: ratmanArmor_11
+    21300024: ratmanArmor_12
+    21300026: ratmanArmor_13
+    21300028: ratmanArmor_14
+    21300030: ratmanArmor_15
+    21300032: ratmanArmor_16
+    21300034: ratmanArmor_17
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ratmanArmor_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2475
+        width: 450
+        height: 495
+      alignment: 9
+      pivot: {x: 0.4595802, y: 0.1996074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ratmanArmor_1
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 2475
+        width: 450
+        height: 495
+      alignment: 9
+      pivot: {x: 0.4595802, y: 0.1996074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ratmanArmor_2
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 2475
+        width: 450
+        height: 495
+      alignment: 9
+      pivot: {x: 0.4595802, y: 0.1996074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ratmanArmor_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1980
+        width: 450
+        height: 495
+      alignment: 9
+      pivot: {x: 0.4595802, y: 0.1996074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ratmanArmor_4
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1980
+        width: 450
+        height: 495
+      alignment: 9
+      pivot: {x: 0.4595802, y: 0.1996074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ratmanArmor_5
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1980
+        width: 450
+        height: 495
+      alignment: 9
+      pivot: {x: 0.4595802, y: 0.1996074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ratmanArmor_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1485
+        width: 450
+        height: 495
+      alignment: 9
+      pivot: {x: 0.4595802, y: 0.1996074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ratmanArmor_7
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1485
+        width: 450
+        height: 495
+      alignment: 9
+      pivot: {x: 0.4595802, y: 0.1996074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ratmanArmor_8
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1485
+        width: 450
+        height: 495
+      alignment: 9
+      pivot: {x: 0.4595802, y: 0.1996074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ratmanArmor_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 990
+        width: 450
+        height: 495
+      alignment: 9
+      pivot: {x: 0.4595802, y: 0.1996074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ratmanArmor_10
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 990
+        width: 450
+        height: 495
+      alignment: 9
+      pivot: {x: 0.4595802, y: 0.1996074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ratmanArmor_11
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 990
+        width: 450
+        height: 495
+      alignment: 9
+      pivot: {x: 0.4595802, y: 0.1996074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ratmanArmor_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 495
+        width: 450
+        height: 495
+      alignment: 9
+      pivot: {x: 0.4595802, y: 0.1996074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ratmanArmor_13
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 495
+        width: 450
+        height: 495
+      alignment: 9
+      pivot: {x: 0.4595802, y: 0.1996074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ratmanArmor_14
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 495
+        width: 450
+        height: 495
+      alignment: 9
+      pivot: {x: 0.4595802, y: 0.1996074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ratmanArmor_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 450
+        height: 495
+      alignment: 9
+      pivot: {x: 0.4595802, y: 0.1996074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ratmanArmor_16
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 450
+        height: 495
+      alignment: 9
+      pivot: {x: 0.4595802, y: 0.1996074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ratmanArmor_17
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 450
+        height: 495
+      alignment: 9
+      pivot: {x: 0.4595802, y: 0.1996074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

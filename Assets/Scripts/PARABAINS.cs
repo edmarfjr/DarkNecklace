@@ -35,5 +35,12 @@ public class PARABAINS : MonoBehaviour {
             GS.saveStatus();
             SceneManager.LoadScene(3);
         }
+        if (toqueTele && Fase == 3)
+        {
+            GameObject gStatus = GameObject.FindGameObjectWithTag("gameStatus");
+            GameStatus GS = gStatus.GetComponent<GameStatus>();
+            GS.saveStatus();
+            SceneManager.LoadScene(4);
+        }
     }
 }

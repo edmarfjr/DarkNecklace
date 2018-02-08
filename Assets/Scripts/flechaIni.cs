@@ -28,7 +28,7 @@ public class flechaIni : MonoBehaviour {
             // Rigidbody2D rbd = PC.GetComponent<Rigidbody2D>();
             if (rbd.transform.position.x < col.transform.position.x)
             {
-                Debug.Log("ENCOSTOU DIREITA");
+
                 script.knockCont = 0.7f;
                 script.knockBDIR();
                 
@@ -36,7 +36,7 @@ public class flechaIni : MonoBehaviour {
             }
             else if (rbd.transform.position.x > col.transform.position.x)
             {
-                Debug.Log("ENCOSTOU ESQUERDA");
+   
                 script.knockCont = 0.7f;
                 script.knockBESQ();
             }

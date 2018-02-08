@@ -79,18 +79,7 @@ public class Slime : MonoBehaviour {
 	void Raycast()
 	{
 		Debug.DrawLine(posi1.position, posi2.position, Color.red);
-
-
-		if(Physics2D.Linecast(posi1.position,posi2.position, 1 << LayerMask.NameToLayer("Piso")))
-		{
-			chao = true;
-		}
-		else
-		{
-			chao = false;
-		}
-
-
+        chao = Physics2D.Linecast(posi1.position, posi2.position, 1 << LayerMask.NameToLayer("Piso"));
 	}
 	IEnumerator PausaPulo()
 	{

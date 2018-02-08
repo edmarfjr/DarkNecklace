@@ -25,6 +25,8 @@ public class Teleport : MonoBehaviour {
     public float auxlimite;
     public bool boss;
     public int fase;
+    public GameObject bau;
+    public GameObject alambique;
   
     // Use this for initialization
     void Start () {
@@ -44,6 +46,7 @@ public class Teleport : MonoBehaviour {
             lacoRespawn();
             PC.transform.position = new Vector3(spawn.transform.position.x, spawn.transform.position.y, PC.transform.position.z);
             cacadoraScript scriPC = PC.GetComponent<cacadoraScript>();
+            tesouroAleatorio();
             scriPC.vigor = scriPC.vigorMax-1;
         }
         if (toqueTele && checa.Nini <= 0 && loja == true && boss == false)
@@ -73,9 +76,31 @@ public class Teleport : MonoBehaviour {
                 cacadoraScript scriPC = PC.GetComponent<cacadoraScript>();
                 scriPC.vigor = scriPC.vigorMax - 1;
             }
+            if (fase == 3)
+            {
+                RatoAmareloBoss scr = bossObj.gameObject.GetComponent<RatoAmareloBoss>();
+                scr.ativo = true;
+
+                PC.transform.position = new Vector3(spawn.transform.position.x, spawn.transform.position.y, PC.transform.position.z);
+                cacadoraScript scriPC = PC.GetComponent<cacadoraScript>();
+                scriPC.vigor = scriPC.vigorMax - 1;
+            }
         }
     }
-
+    void tesouroAleatorio()
+    {
+        int i = Random.Range(0, 100);
+        int aux = vetIni.Length;
+        Vector3 pos = new Vector3(item1.position.x, item1.position.y, -1f);
+        if (i <= 10)
+        {
+            Instantiate(bau, pos, Quaternion.identity);
+        }
+        if (i <= 20&&i>10)
+        {
+            Instantiate(alambique , pos, Quaternion.identity);
+        }
+    }
     void respawn()
     {
         ChecaIni checa = checaini.GetComponent<ChecaIni>();

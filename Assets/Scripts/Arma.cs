@@ -45,6 +45,15 @@ public class Arma : MonoBehaviour {
             dano = scriPC.bonusAtaque + 2;
             knockback = 0.9f;
         }
-
+        if (scriPC.itemTipo == "facaArremeco")
+        {
+            dano = 2;
+            knockback = 0.2f;
+        }
+        if (scriPC.itemTipo == "pistola")
+        {
+            dano = 2;
+            knockback = 0.5f;
+        }
     }
 }

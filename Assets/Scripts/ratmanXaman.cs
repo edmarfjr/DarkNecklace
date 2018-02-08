@@ -129,7 +129,7 @@ public class ratmanXaman : MonoBehaviour {
 
     public void tomouDano(int x, float kb)
     {
-        Debug.Log("MORRE RATO");
+        
         tempStag = 1f;
 
         anim.SetTrigger("golpeado");
