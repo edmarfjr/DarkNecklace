@@ -5,6 +5,7 @@ using UnityEngine;
 public class golemBoss : MonoBehaviour {
     public Rigidbody2D rbd;
     public GameObject PC;
+    public GameObject[] drops;
     public int vida;
     public int vidaMax;
     public bool atacando;
@@ -160,10 +161,16 @@ public class golemBoss : MonoBehaviour {
                 ChecaIni checa = checaini.GetComponent<ChecaIni>();
                 checa.morreuBoss();
                 anim.SetTrigger("morreu");
-                //drop();
+                drop();
                 Destroy(this.gameObject, 0.9f);
             }
         }
     }
-
+    public void drop()
+    {
+        int i = Random.Range(0, 2);        
+            //Debug.Log(i);
+            Vector3 pos = new Vector3(rbd.transform.position.x, rbd.transform.position.y + 1, -1);
+            Instantiate(drops[i], pos, Quaternion.identity);       
+    }
 }

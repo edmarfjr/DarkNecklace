@@ -42,10 +42,10 @@ GameObject:
   - component: {fileID: 4821496139921810}
   - component: {fileID: 50740848345437310}
   - component: {fileID: 61976642342040676}
-  - component: {fileID: 114797520111052042}
-  m_Layer: 0
+  - component: {fileID: 114605156713866946}
+  m_Layer: 14
   m_Name: fogo
-  m_TagString: itemArremeco
+  m_TagString: ataque
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1197027762564188}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -34.879, y: -13.06, z: 0}
+  m_LocalPosition: {x: -18.61008, y: -15.540222, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4821496139921810}
@@ -177,7 +177,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0.010850906, y: 0.32551527}
   m_SpriteTilingProperty:
@@ -223,7 +223,7 @@ MonoBehaviour:
   velocidade: {x: 5, y: 5}
   anim: {fileID: 0}
   temp: 3
---- !u!114 &114797520111052042
+--- !u!114 &114605156713866946
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -231,7 +231,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1600907064572902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c142a6f1436ad6648abafdbfd73a1c49, type: 3}
+  m_Script: {fileID: 11500000, guid: f6af9cd21d451e24fa1b35e2f0f0cfd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dano: 1

@@ -55,5 +55,10 @@ public class Arma : MonoBehaviour {
             dano = 2;
             knockback = 0.5f;
         }
+        if (scriPC.itemTipo == "bombaIncend")
+        {
+            dano = 1;
+            knockback = 0.5f;
+        }
     }
 }

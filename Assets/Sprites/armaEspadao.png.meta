@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b811f02f588f05a4e9a819705c1d3b2b
-timeCreated: 1514377851
+timeCreated: 1518106462
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -90,7 +90,7 @@ TextureImporter:
         width: 864
         height: 576
       alignment: 9
-      pivot: {x: 0.37458387, y: 0.0506588}
+      pivot: {x: 0.3732601, y: 0.05628458}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -101,10 +101,10 @@ TextureImporter:
         serializedVersion: 2
         x: 864
         y: 0
-        width: 864
+        width: 853
         height: 576
       alignment: 9
-      pivot: {x: 0.3745839, y: 0.0506588}
+      pivot: {x: 0.3770619, y: 0.05546895}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -113,12 +113,12 @@ TextureImporter:
       name: armaEspadao_2
       rect:
         serializedVersion: 2
-        x: 1728
+        x: 1718
         y: 0
-        width: 864
+        width: 862
         height: 576
       alignment: 9
-      pivot: {x: 0.3745839, y: 0.0506588}
+      pivot: {x: 0.38505566, y: 0.05438821}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -127,12 +127,12 @@ TextureImporter:
       name: armaEspadao_3
       rect:
         serializedVersion: 2
-        x: 2592
+        x: 2581
         y: 0
-        width: 864
+        width: 875
         height: 576
       alignment: 9
-      pivot: {x: 0.3745839, y: 0.0506588}
+      pivot: {x: 0.3808111, y: 0.05667838}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

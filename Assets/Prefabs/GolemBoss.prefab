@@ -113,7 +113,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1310427986733454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.985344, y: 18.772831, z: 0}
+  m_LocalPosition: {x: -13.191654, y: -202.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4292583870605246}
@@ -154,7 +154,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &61286470762758448
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PC: {fileID: 0}
-  dano: 1
+  dano: 2
   rbd: {fileID: 50120805738915028}
 --- !u!114 &114469467981560472
 MonoBehaviour:
@@ -287,6 +287,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rbd: {fileID: 0}
   PC: {fileID: 0}
+  drops:
+  - {fileID: 1274592268682460, guid: 1239da16499f686478bf1fad1c4266a8, type: 2}
+  - {fileID: 1636039725023690, guid: 95d76dbadf5eeac4fbcf772da21bf175, type: 2}
+  - {fileID: 1069083353837996, guid: a53a7ef81d668554bb8f6dc0dd0a47d3, type: 2}
   vida: 40
   vidaMax: 40
   atacando: 0
@@ -300,7 +304,7 @@ MonoBehaviour:
   vet1: {fileID: 0}
   vet2: {fileID: 0}
   pedrasN: 0
-  numPedras: 15
+  numPedras: 10
   ativo: 0
   dire: 0
 --- !u!212 &212722622121351446

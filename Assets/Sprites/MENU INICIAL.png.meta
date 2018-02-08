@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 2aef0402d9e8e9d41a59e934b14f188f
-timeCreated: 1508215204
+timeCreated: 1518113743
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -12,6 +12,16 @@ TextureImporter:
     21300010: MENU INICIAL_15
     21300012: MENU INICIAL_16
     21300014: MENU INICIAL_17
+    21300016: MENU INICIAL_18
+    21300018: MENU INICIAL_19
+    21300020: MENU INICIAL_20
+    21300022: MENU INICIAL_21
+    21300024: MENU INICIAL_22
+    21300026: MENU INICIAL_23
+    21300028: MENU INICIAL_24
+    21300030: MENU INICIAL_25
+    21300032: MENU INICIAL_26
+  externalObjects: {}
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -20,6 +30,8 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -35,10 +47,13 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
+    serializedVersion: 2
     filterMode: -1
     aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -60,6 +75,7 @@ TextureImporter:
   platformSettings:
   - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -68,6 +84,7 @@ TextureImporter:
     overridden: 0
   - buildTarget: Standalone
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -76,6 +93,7 @@ TextureImporter:
     overridden: 0
   - buildTarget: Android
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -90,106 +108,241 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1224
+        y: 1973
         width: 1080
-        height: 612
+        height: 613
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: MENU INICIAL_1
       rect:
         serializedVersion: 2
-        x: 153
-        y: 972
-        width: 567
-        height: 108
+        x: 151
+        y: 1720
+        width: 571
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: MENU INICIAL_2
       rect:
         serializedVersion: 2
-        x: 153
-        y: 756
-        width: 333
-        height: 72
+        x: 151
+        y: 1505
+        width: 336
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: MENU INICIAL_13
       rect:
         serializedVersion: 2
         x: 9
-        y: 306
-        width: 1026
-        height: 135
+        y: 1055
+        width: 1027
+        height: 138
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: MENU INICIAL_14
       rect:
         serializedVersion: 2
         x: 18
-        y: 144
-        width: 315
-        height: 135
+        y: 892
+        width: 319
+        height: 139
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: MENU INICIAL_15
       rect:
         serializedVersion: 2
-        x: 351
-        y: 144
-        width: 333
-        height: 135
+        x: 709
+        y: 893
+        width: 319
+        height: 138
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: MENU INICIAL_16
       rect:
         serializedVersion: 2
-        x: 693
-        y: 144
-        width: 315
-        height: 135
+        x: 18
+        y: 738
+        width: 336
+        height: 138
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: MENU INICIAL_17
       rect:
         serializedVersion: 2
-        x: 340
-        y: 0
-        width: 315
-        height: 135
+        x: 655
+        y: 767
+        width: 4
+        height: 101
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MENU INICIAL_18
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 733
+        width: 317
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MENU INICIAL_19
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 569
+        width: 336
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MENU INICIAL_20
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 561
+        width: 336
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MENU INICIAL_21
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 408
+        width: 354
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MENU INICIAL_22
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 402
+        width: 336
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MENU INICIAL_23
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 206
+        width: 373
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MENU INICIAL_24
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 205
+        width: 353
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MENU INICIAL_25
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 12
+        width: 354
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MENU INICIAL_26
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 13
+        width: 354
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
       tessellationDetail: 0
     outline: []
+    physicsShape: []
   spritePackingTag: 
   userData: 
   assetBundleName: 

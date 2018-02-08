@@ -1287,7 +1287,7 @@ MonoBehaviour:
   barra2: {fileID: 1586814387254310}
   barra3: {fileID: 1153545811323822}
   tamanhoVida: 0
-  iniNum: 1
+  iniNum: 3
 --- !u!114 &114773943562297448
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1417,6 +1417,7 @@ MonoBehaviour:
   - {fileID: 21300002, guid: f20e58ad8290d8b4cb39cfbee4fd4cc4, type: 3}
   - {fileID: 21300002, guid: ea3cff4b48daca0448a62ef44e82ff66, type: 3}
   - {fileID: 21300000, guid: 123b3b58852e70c4e9bfa0f4103da96e, type: 3}
+  - {fileID: 21300020, guid: ff5d1d794561c13459d595dd0efbd171, type: 3}
   PC: {fileID: 0}
 --- !u!114 &114944278261247366
 MonoBehaviour:

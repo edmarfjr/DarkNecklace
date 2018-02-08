@@ -212,7 +212,7 @@ public class RatoAmareloBoss : MonoBehaviour {
     {
         if (!morreu)
         {
-            if (vida <= 0)
+            if (vida <= 0&&invocafim)
             {
                 morreu = true;
                 ChecaIni checa = checaini.GetComponent<ChecaIni>();
