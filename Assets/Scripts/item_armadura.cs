@@ -55,6 +55,7 @@ public class item_armadura : MonoBehaviour {
                 }
                 if (scriPC.moedas >= preco && !limite && comprou == false)
                 {
+                    this.gameObject.transform.localScale = new Vector2(0, 0);
                     scriPC.moedas -= preco;
                     scriPC.armadura += 4;
                     comprou = true;

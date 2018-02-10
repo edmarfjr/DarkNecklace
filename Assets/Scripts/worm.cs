@@ -115,20 +115,15 @@ public class worm : MonoBehaviour {
     }
     public void tomouDano(int x, float kb)
     {
-       
-        tempStag = 1.0f;
-        //soundManager.instance.PlaySingle(hit, 1f);
-        StartCoroutine(piscaCor());
-       /* if (tempStag>0)
+       if(!golpeado)
         {
-            if (PC.transform.position.x > rbd.position.x)
-                rbd.velocity = new Vector2(-4 * kb, rbd.velocity.y);
-            if (PC.transform.position.x < rbd.position.x)
-                rbd.velocity = new Vector2(4 * kb, rbd.velocity.y);
+            golpeado = true;
+            tempStag = 1.0f;
+            //soundManager.instance.PlaySingle(hit, 1f);
+            StartCoroutine(piscaCor());
+            vida = vida - x;
+            golpeado = false;
         }
-        */
-
-        vida = vida - x;
     }
     void morrer()
     {

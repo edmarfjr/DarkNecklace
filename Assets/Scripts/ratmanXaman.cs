@@ -129,18 +129,18 @@ public class ratmanXaman : MonoBehaviour {
 
     public void tomouDano(int x, float kb)
     {
-        
-        tempStag = 1f;
-
-        anim.SetTrigger("golpeado");
-        if (PC.transform.position.x > rbd.position.x)
-            rbd.velocity = new Vector2(-4 * kb, 1);
-        if (PC.transform.position.x < rbd.position.x)
-            rbd.velocity = new Vector2(4 * kb, 1);
-
-        vida = vida - x;
-
-
+        if(!golpeado)
+        {
+            golpeado = true;
+            tempStag = 1f;
+            anim.SetTrigger("golpeado");
+            if (PC.transform.position.x > rbd.position.x)
+                rbd.velocity = new Vector2(-4 * kb, 1);
+            if (PC.transform.position.x < rbd.position.x)
+                rbd.velocity = new Vector2(4 * kb, 1);
+            vida = vida - x;
+            golpeado = false;
+        }        
     }
 
 

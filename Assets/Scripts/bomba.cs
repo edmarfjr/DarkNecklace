@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class bomba : MonoBehaviour {
 
-    public Vector2 velocidade;
+    public float x;
+    public float y;
     public Animator anim;
     Rigidbody2D bomb;
     public float temp;
@@ -14,7 +15,7 @@ public class bomba : MonoBehaviour {
     {
         bomb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        bomb.velocity = velocidade * this.transform.localScale.x;
+        bomb.velocity = new Vector2(x * this.transform.localScale.x, y);
     }
 
     // Update is called once per frame

@@ -44,6 +44,7 @@ public class item_manopla : MonoBehaviour {
                 }
                 if (scriPC.moedas >= preco && comprou == false)
                 {
+                    this.gameObject.transform.localScale = new Vector2(0, 0);
                     scriPC.moedas -= preco;
                     scriPC.bonusAtaque += 1;
                     comprou = true;

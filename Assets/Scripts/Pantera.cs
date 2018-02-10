@@ -197,17 +197,19 @@ public class Pantera : MonoBehaviour
 
     public void tomouDano(int x, float kb)
     {
-        tempStag = 1f;
-       PlaySingle(hit, 0.6f);
-        anim.SetTrigger("golpeado");
-        if (PC.transform.position.x > rbd.position.x)
-            rbd.velocity = new Vector2(-4 * kb, rbd.velocity.y);
-        if (PC.transform.position.x < rbd.position.x)
-            rbd.velocity = new Vector2(4 * kb, rbd.velocity.y);
-
-        vida = vida - x;
-
-
+        if(!golpeado)
+        {
+            golpeado = true;
+            tempStag = 1f;
+            PlaySingle(hit, 0.6f);
+            anim.SetTrigger("golpeado");
+            if (PC.transform.position.x > rbd.position.x)
+                rbd.velocity = new Vector2(-4 * kb, rbd.velocity.y);
+            if (PC.transform.position.x < rbd.position.x)
+                rbd.velocity = new Vector2(4 * kb, rbd.velocity.y);
+            vida = vida - x;
+            golpeado = false;
+        }
     }
 
     public void drop()

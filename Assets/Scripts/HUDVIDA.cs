@@ -25,8 +25,6 @@ public class HUDVIDA : MonoBehaviour {
         tamanhoArmor = (armor / MAX);
 		tamanhoVida = (Atual/10) ;
 
-
-
         Vector2 temp = BarraVida.transform.localScale;
         if (script.vida >= 0)
             temp = new Vector2(tamanhoVida, 1f);

@@ -186,7 +186,7 @@ MonoBehaviour:
   pcScr: {fileID: 0}
   alcAtaq: 0
   tempStag: 0
-  distAgro: 20
+  distAgro: 14
   distAtaq: 6
   esperAtaq: 0
   dir: 0

@@ -37,6 +37,11 @@ public class HUDVIGOR : MonoBehaviour {
         if (script.vigor >= 0)
             temp3 = new Vector2((MAX / 10) * 1f, 1f);
         barraFundo  .transform.localScale = temp3;
+        if(script.vigor<=0)
+        {
+            temp = new Vector2(0f, 1f);
+            BarraVigor.transform.localScale = temp;
+        }
 
     }
 }

@@ -6,23 +6,23 @@ public class golemBoss : MonoBehaviour {
     public Rigidbody2D rbd;
     public GameObject PC;
     public GameObject[] drops;
-    public int vida;
-    public int vidaMax;
-    public bool atacando;
-    public float esperataq1;
-    public float esperataq2;
-    public Animator anim;
     public GameObject checaini;
-    public bool morreu;
     public Transform pedraPois;
     public GameObject pedraObj;
+    public Animator anim;
     public Transform vet1;
     public Transform vet2;
+    public int vida;
+    public int vidaMax;
     public int pedrasN;
     public int numPedras;
-    public bool ativo;
+    public float esperataq1;
+    public float esperataq2;
     public float dire;
-
+    public bool atacando;
+    public bool morreu;      
+    public bool ativo;   
+    public bool golpeado;
     // Use this for initialization
     void Start () {
         morreu = false;
@@ -128,17 +128,13 @@ public class golemBoss : MonoBehaviour {
 
     public void tomouDano(int x, float kb)
     {
-        /*
-        anim.SetTrigger("golpeado");
-        if (PC.transform.position.x > rbd.position.x)
-            rbd.velocity = new Vector2(-4 * kb, 1);
-        if (PC.transform.position.x < rbd.position.x)
-            rbd.velocity = new Vector2(4 * kb, 1);
-        */
-        StartCoroutine(piscaCor());
-        vida = vida - x;
-
-
+       if(!golpeado)
+        {
+            golpeado = true;
+            StartCoroutine(piscaCor());
+            vida = vida - x;
+            golpeado = false;
+        }       
     }
     IEnumerator piscaCor()
     {

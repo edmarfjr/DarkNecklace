@@ -44,6 +44,7 @@ public class CoraçaoItem : MonoBehaviour
                 }
                 if (scriPC.moedas >= preco && comprou == false)
                 {
+                    this.gameObject.transform.localScale = new Vector2(0, 0);
                     scriPC.moedas -= preco;
                     scriPC.vidaMax += 3;
                     scriPC.vida += 3;

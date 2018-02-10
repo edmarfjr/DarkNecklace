@@ -92,6 +92,7 @@ public class Slime : MonoBehaviour {
 		if (col.tag.Equals ("ataque")) {
             Arma dano = col.gameObject.GetComponent<Arma>();
             float kn = dano.knockback;
+            StartCoroutine(piscaCor());
             if (personagem.position.x > slime.position.x) {
 				slime.velocity = new Vector2 (-1 * 5*kn, slime.velocity.y);
 			}
@@ -105,6 +106,7 @@ public class Slime : MonoBehaviour {
         {
             itemArremeco dano = col.gameObject.GetComponent<itemArremeco>();
             float kn = dano.knockback;
+            StartCoroutine(piscaCor());
             if (personagem.position.x > slime.position.x)
             {
                 slime.velocity = new Vector2(-1 * 5 * kn, slime.velocity.y);
@@ -168,5 +170,15 @@ public class Slime : MonoBehaviour {
         sfxSource.clip = clip;
         sfxSource.pitch = aux;
         sfxSource.Play();
+    }
+    IEnumerator piscaCor()
+    {
+        GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<SpriteRenderer>().color = Color.white;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
 }

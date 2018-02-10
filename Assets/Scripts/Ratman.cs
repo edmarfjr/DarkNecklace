@@ -43,8 +43,7 @@ public class Ratman : MonoBehaviour
         checaini = GameObject.FindGameObjectWithTag("checaIni");
     }
     void Update()
-    {
-        
+    {       
         if (tempStag > 0)
         {
             tempStag = tempStag - Time.deltaTime;
@@ -58,7 +57,6 @@ public class Ratman : MonoBehaviour
         alcanceAtaque();
         andar();
         StartCoroutine(ataque());
-
         morrer();
     }
 
@@ -106,13 +104,11 @@ public class Ratman : MonoBehaviour
             if (Vector2.Distance(rbd.transform.position, PC.transform.position) < 2f && tempStag <= 0)
             {
                 rbd.velocity = new Vector2(0, 0);
-                alcAtaq = true;
-                
+                alcAtaq = true;                
             }
             else
             {
                 alcAtaq = false;
-
             }
         }
         if (arqueiro == true)
@@ -121,12 +117,10 @@ public class Ratman : MonoBehaviour
             {
                 rbd.velocity = new Vector2(0, 0);
                 alcAtaq = true;
-                
             }
             else
             {
                 alcAtaq = false;
-
             }
         }
         if (alq == true)
@@ -135,12 +129,10 @@ public class Ratman : MonoBehaviour
             {
                 rbd.velocity = new Vector2(0, 0);
                 alcAtaq = true;
-
             }
             else
             {
                 alcAtaq = false;
-
             }
         }
 
@@ -186,13 +178,13 @@ public class Ratman : MonoBehaviour
         if (alcAtaq && esperAtaq <= 0 && tempStag <= 0 && arqueiro == true && !morreu)
         {
             atacando = true;
-            
             esperAtaq = 4;
             if(armadura)
             {
                 anim.SetBool("atirando", true);
+                PlaySingle(tiro, 0.2f);
                 yield return new WaitForSeconds(0.7f);
-                PlaySingle(tiro, 1f);
+                
                 criaFlecha();
                 yield return new WaitForSeconds(0.3f);
                 
@@ -201,14 +193,12 @@ public class Ratman : MonoBehaviour
             else
             {
                 anim.SetBool("atirando", true);
-                yield return new WaitForSeconds(0.2f);
+                yield return new WaitForSeconds(0.3f);
                 PlaySingle(tiro, 1f);
                 yield return new WaitForSeconds(0.6f);
                 criaFlecha();
                 anim.SetBool("atirando", false);
             }
-            
-           
             atacando = false;       
         }
 
@@ -216,24 +206,30 @@ public class Ratman : MonoBehaviour
 
     public void tomouDano(int x, float kb)
     {
-        if(!armadura)
+        if(!golpeado)
         {
-            tempStag = 1f;
-            PlaySingle(hit, 1f);
-            anim.SetTrigger("golpeado");
-            PlaySingle(hit, 1f);
-            StartCoroutine(piscaCor());
-            if (PC.transform.position.x > rbd.position.x)
-                rbd.velocity = new Vector2(-4 * kb, 1);
-            if (PC.transform.position.x < rbd.position.x)
-                rbd.velocity = new Vector2(4 * kb, 1);
+            golpeado = true;
+            if (!armadura)
+            {
+                tempStag = 1f;
+                PlaySingle(hit, 1f);
+                anim.SetTrigger("golpeado");
+                PlaySingle(hit, 1f);
+                StartCoroutine(piscaCor());
+                if (PC.transform.position.x > rbd.position.x)
+                    rbd.velocity = new Vector2(-4 * kb, 1);
+                if (PC.transform.position.x < rbd.position.x)
+                    rbd.velocity = new Vector2(4 * kb, 1);
+            }
+            if (armadura)
+            {
+                PlaySingle(hit, 1f);
+                StartCoroutine(piscaCor());
+            }
+            vida = vida - x;
+            golpeado = false;
         }
-        if(armadura)
-        {
-            PlaySingle(hit, 1f);
-            StartCoroutine(piscaCor());
-        }
-         vida = vida - x;
+        
      }
 
     IEnumerator piscaCor()

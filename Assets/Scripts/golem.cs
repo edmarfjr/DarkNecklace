@@ -103,9 +103,13 @@ public class golem : MonoBehaviour {
     }
     public void tomouDano(int x, float kb)
     {
-
-        StartCoroutine(piscaCor());
-        vida = vida - x;
+        if (!golpeado)
+        {
+            golpeado = true;
+            StartCoroutine(piscaCor());
+            vida = vida - x;
+            golpeado = false;
+        }
     }
     IEnumerator piscaCor()
     {

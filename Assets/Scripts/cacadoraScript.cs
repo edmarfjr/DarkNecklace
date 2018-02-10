@@ -274,21 +274,16 @@ public class cacadoraScript : MonoBehaviour {
            PlaySingle(dash1, 1.3f);
             anim.SetBool ("esquiva", true);
 			if (direita==true) {
-				rbd.velocity=new Vector2(esquiva,rbd.velocity.y);
-				
+				rbd.velocity=new Vector2(esquiva,rbd.velocity.y);				
 			} else {
 				rbd.velocity=new Vector2(-esquiva,rbd.velocity.y);
 				
 			}
-
 			vigor -= 4;
-
 			yield return new WaitForSeconds(1);
 			anim.SetBool ("esquiva", false);
 			dash = false;
 			velocidade = 7;
-
-
 		}
 	}
 
@@ -367,13 +362,9 @@ public class cacadoraScript : MonoBehaviour {
                 {
                    // vigor -= 4;
                    // PlaySingle (ataca1);
-
                     atacou = true;
-
                     anim.SetBool("ataqueEsp", true);
-
                     yield return new WaitForSeconds(0.8f);
-
                     anim.SetBool("ataqueEsp", false);
                     atacou = false;
                     municao -= 1;
@@ -389,13 +380,9 @@ public class cacadoraScript : MonoBehaviour {
             if (Input.GetButtonDown("Fire1") && atacou == false && vigor > 0 && dead == false && estaNoChao) {
                 vigor -= 4;
                PlaySingle(ataca1,1);
-
                 atacou = true;
-
                 anim.SetBool("ataque", true);
-
                 yield return new WaitForSeconds(0.4f);
-
                 anim.SetBool("ataque", false);
                 atacou = false;
             }
@@ -499,10 +486,6 @@ public class cacadoraScript : MonoBehaviour {
         }
     }
 
-
-
-
-
 	IEnumerator morreu()
 	{
 		yield return new WaitForSeconds(1.1f);
@@ -515,18 +498,13 @@ public class cacadoraScript : MonoBehaviour {
         SceneManager.LoadScene(0);
     }
 
-
-
-
-
-
     public void knockBDIR()
     {
         if (invencibilidade <= 0)
         { 
          
                 rbd.velocity = new Vector2(knockPwr, rbd.velocity.y);
-         PlaySingle(die1, 1.3f);
+         PlaySingle(die1, 1.4f);
             //encostouDir = false;
         }
     }
@@ -537,7 +515,7 @@ public class cacadoraScript : MonoBehaviour {
         {
 
             rbd.velocity = new Vector2(-knockPwr, rbd.velocity.y);
-         PlaySingle(die1, 1.3f);
+         PlaySingle(die1, 1.4f);
 
             //encostouDir = false;
         }
