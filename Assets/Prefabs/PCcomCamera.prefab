@@ -251,7 +251,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1804594085440946}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.37, y: -4.3099985, z: 9}
+  m_LocalPosition: {x: 0.37, y: -4.3099985, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4172325423161470}
@@ -271,7 +271,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1272943269232482}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -38.88, y: -11.9, z: -10}
+  m_LocalPosition: {x: -22.9, y: -12.89, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4877405655179368}
@@ -603,6 +603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dano: 4
+  bonusAtaq: 0
   knockback: 0
   PC: {fileID: 0}
 --- !u!114 &114421905047380308
@@ -617,6 +618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dano: 0
+  bonusAtaq: 0
   knockback: 0
   PC: {fileID: 0}
 --- !u!114 &114909203139231492
@@ -693,6 +695,12 @@ MonoBehaviour:
   escudoDivino: 0
   andaDir: 0
   bloq: 0
+  andaDirTouch: 0
+  andaEsqTouch: 0
+  armaObj: {fileID: 0}
+  envenenada: 0
+  tempVeneno: 0
+  auxVeneno: 0
 --- !u!114 &114923472729589042
 MonoBehaviour:
   m_ObjectHideFlags: 1
