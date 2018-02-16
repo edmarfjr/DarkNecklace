@@ -7,18 +7,30 @@ public class PedraCai : MonoBehaviour {
     public GameObject PC;
     public int dano;
     public Rigidbody2D rbd;
+    public bool armadilha;
+    public bool gatilho;
 
     // Use this for initialization
     void Start () {
         rbd = GetComponent<Rigidbody2D>();
-        Destroy(this.gameObject, tempoDestroi);
+        
         PC = GameObject.FindGameObjectWithTag("Player");
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (!armadilha)
+        {
+            Destroy(this.gameObject, tempoDestroi);
+        }
+        else
+        {
+            if(gatilho)
+            {
+                Destroy(this.gameObject, tempoDestroi);
+            }
+        }
+    }
     void OnTriggerEnter2D(Collider2D col)
     {
         cacadoraScript script = PC.GetComponent<cacadoraScript>();

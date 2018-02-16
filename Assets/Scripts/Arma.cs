@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Arma : MonoBehaviour {
     public int dano;
+    public int bonusAtaq;
     public float knockback;
     public GameObject PC;
     // Use this for initialization
@@ -14,51 +15,102 @@ public class Arma : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        dano=DanoArma();
+        knockback = armaKb();
+    }
+    public int DanoArma()
+    {
         cacadoraScript scriPC = PC.GetComponent<cacadoraScript>();
+        bonusAtaq = scriPC.bonusAtaque;
+        
         if (scriPC.armaTipo == "espadaCurta")
         {
-            dano = scriPC.bonusAtaque+2;
-            knockback = 1f;
+            dano = bonusAtaq + 2;
+            return dano;
         }
         if (scriPC.armaTipo == "adaga")
         {
-            dano = scriPC.bonusAtaque + 1;
-            knockback = 0.5f;
+            dano = bonusAtaq + 1;
+            return dano;
         }
         if (scriPC.armaTipo == "machado")
         {
-            dano = scriPC.bonusAtaque + 4;
-            knockback = 1.3f;
+            dano = bonusAtaq + 4;
+            return dano;
         }
         if (scriPC.armaTipo == "espadao")
         {
-            dano = scriPC.bonusAtaque + 3;
-            knockback = 1.3f;
+            dano = bonusAtaq + 3;
+            return dano;
         }
         if (scriPC.armaTipo == "lanca")
         {
-            dano = scriPC.bonusAtaque + 2;
-            knockback = 1.2f;
+            dano = bonusAtaq + 2;
+            return dano;
         }
         if (scriPC.armaTipo == "rapier")
         {
-            dano = scriPC.bonusAtaque + 2;
-            knockback = 0.9f;
+            dano = bonusAtaq + 2;
+            return dano;
         }
         if (scriPC.itemTipo == "facaArremeco")
         {
             dano = 2;
-            knockback = 0.2f;
+            return dano;
         }
         if (scriPC.itemTipo == "pistola")
         {
             dano = 2;
-            knockback = 0.5f;
+            return dano;
         }
         if (scriPC.itemTipo == "bombaIncend")
         {
             dano = 1;
-            knockback = 0.5f;
+            return dano;
         }
+        else { return 0; }
+    }
+    public float armaKb()
+    {
+        cacadoraScript scriPC = PC.GetComponent<cacadoraScript>();
+        bonusAtaq = scriPC.bonusAtaque;
+
+        if (scriPC.armaTipo == "espadaCurta")
+        {
+            return  1f;
+        }
+        if (scriPC.armaTipo == "adaga")
+        {
+            return  0.5f;
+        }
+        if (scriPC.armaTipo == "machado")
+        {
+            return 1.3f;
+        }
+        if (scriPC.armaTipo == "espadao")
+        {
+            return 1.3f;
+        }
+        if (scriPC.armaTipo == "lanca")
+        {
+            return 1.2f;
+        }
+        if (scriPC.armaTipo == "rapier")
+        {
+            return 0.9f;
+        }
+        if (scriPC.itemTipo == "facaArremeco")
+        {
+            return 0.2f;
+        }
+        if (scriPC.itemTipo == "pistola")
+        {
+            return 0.5f;
+        }
+        if (scriPC.itemTipo == "bombaIncend")
+        {
+            return 0.5f;
+        }
+        else { return 0; }
     }
 }

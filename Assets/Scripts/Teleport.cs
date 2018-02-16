@@ -27,6 +27,7 @@ public class Teleport : MonoBehaviour {
     public int fase;
     public GameObject bau;
     public GameObject alambique;
+    public GameObject armadilha;
   
     // Use this for initialization
     void Start () {
@@ -47,7 +48,8 @@ public class Teleport : MonoBehaviour {
             PC.transform.position = new Vector3(spawn.transform.position.x, spawn.transform.position.y, PC.transform.position.z);
             cacadoraScript scriPC = PC.GetComponent<cacadoraScript>();
             tesouroAleatorio();
-            scriPC.vigor = scriPC.vigorMax-1;
+            armadilhaSpawn();
+            scriPC.vigor = scriPC.vigorMax-1;           
         }
         if (toqueTele && checa.Nini <= 0 && loja == true && boss == false)
         {
@@ -85,6 +87,24 @@ public class Teleport : MonoBehaviour {
                 cacadoraScript scriPC = PC.GetComponent<cacadoraScript>();
                 scriPC.vigor = scriPC.vigorMax - 1;
             }
+        }
+    }
+    void armadilhaSpawn ()
+    {
+        int i = Random.Range(0, 100);
+        if (i<=40)
+        {
+            int aux = Random.Range(1, 5);
+            int cont = 0;
+            while(cont<aux)
+            {
+
+                float posx = Random.Range(vet1.transform.position.x, vet2.transform.position.x);
+                Vector3 pos = new Vector3(posx, vet1.transform.position.y, -1);
+                Instantiate(armadilha, pos, Quaternion.identity);
+                cont += 1;
+            }
+           
         }
     }
     void tesouroAleatorio()

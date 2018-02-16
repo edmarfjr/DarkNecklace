@@ -208,6 +208,7 @@ public class Ratman : MonoBehaviour
     {
         if(!golpeado)
         {
+            Debug.Log(x);
             golpeado = true;
             if (!armadura)
             {
@@ -223,8 +224,18 @@ public class Ratman : MonoBehaviour
             }
             if (armadura)
             {
+                float auxKb;
+                auxKb = kb - 0.8f;
+                if(auxKb<0)
+                {
+                    auxKb = 0;
+                }
                 PlaySingle(hit, 1f);
                 StartCoroutine(piscaCor());
+                if (PC.transform.position.x > rbd.position.x)
+                    rbd.velocity = new Vector2(-4 * auxKb, 1);
+                if (PC.transform.position.x < rbd.position.x)
+                    rbd.velocity = new Vector2(4 * auxKb, 1);
             }
             vida = vida - x;
             golpeado = false;

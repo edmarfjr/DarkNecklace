@@ -7,6 +7,7 @@ public class espinho : MonoBehaviour {
     public GameObject PC;
     public int dano;
     public Transform espim;
+    public bool bombaVeneno;
     // Use this for initialization
     void Start()
     {
@@ -45,10 +46,18 @@ public class espinho : MonoBehaviour {
     }
     public void levaDano(int x)
     {
-
-        cacadoraScript script = PC.GetComponent<cacadoraScript>();
-        script.vida -= dano;
-        script.invencibilidade = 1;
+        if(!bombaVeneno)
+        {
+            cacadoraScript script = PC.GetComponent<cacadoraScript>();
+            script.vida -= dano;
+            script.invencibilidade = 1;
+        }
+        else
+        {
+            cacadoraScript script = PC.GetComponent<cacadoraScript>();
+            script.tempVeneno = 6;
+        }
+        
 
     }
 }

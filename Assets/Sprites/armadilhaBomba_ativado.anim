@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: cacadora_lanca
+  m_Name: armadilhaBomba_ativado
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -13,50 +13,7 @@ AnimationClip:
   m_RotationCurves: []
   m_CompressedRotationCurves: []
   m_EulerCurves: []
-  m_PositionCurves:
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 2
-        time: 0
-        value: {x: 0.88, y: 1.32, z: 0}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 0.1
-        value: {x: 1.2562963, y: 1, z: 0}
-        inSlope: {x: 6.8222218, y: 0, z: 0}
-        outSlope: {x: 6.8222218, y: 0, z: 0}
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 0.3
-        value: {x: 3, y: 1.13, z: 0}
-        inSlope: {x: 7.7999997, y: 1.3333333, z: 0}
-        outSlope: {x: 7.7999997, y: 1.3333333, z: 0}
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 0.4
-        value: {x: 4, y: 1.4, z: 0}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 0.5
-        value: {x: 3.8, y: 1.4, z: 0}
-        inSlope: {x: -2.6666667, y: 0, z: 0}
-        outSlope: {x: -2.6666667, y: 0, z: 0}
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 0.70000005
-        value: {x: 0.88, y: 1.32, z: 0}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: Ataque
+  m_PositionCurves: []
   m_ScaleCurves: []
   m_FloatCurves:
   - curve:
@@ -64,30 +21,18 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+      - serializedVersion: 2
+        time: 0.95
         value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
       - serializedVersion: 2
-        time: 0.1
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      - serializedVersion: 2
-        time: 0.3
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      - serializedVersion: 2
-        time: 0.6
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      - serializedVersion: 2
-        time: 0.70000005
+        time: 1.4
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -96,7 +41,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Ataque
+    path: ataqBomba
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -105,46 +50,42 @@ AnimationClip:
       - serializedVersion: 2
         time: 0
         value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      - serializedVersion: 2
-        time: 0.3
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      - serializedVersion: 2
-        time: 0.6
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      - serializedVersion: 2
-        time: 0.70000005
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Enabled
-    path: Ataque
-    classID: 61
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 2
-        time: 0
-        value: -0.8926277
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 0.70000005
-        value: -0.8926277
+        time: 0.95
+        value: 0.35
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.05
+        value: 0.35
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.15
+        value: 0.35
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.25
+        value: 0.3
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.35
+        value: 0.3
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.45
+        value: 0.35
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -152,7 +93,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Offset.x
-    path: Ataque
+    path: ataqBomba
     classID: 61
     script: {fileID: 0}
   - curve:
@@ -160,13 +101,43 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 0.2086587
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 0.70000005
-        value: 0.2086587
+        time: 0.95
+        value: 1.45
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.05
+        value: 1.45
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.15
+        value: 1.45
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.25
+        value: 1.45
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.35
+        value: 1.45
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.45
+        value: 1.45
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -174,7 +145,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Offset.y
-    path: Ataque
+    path: ataqBomba
     classID: 61
     script: {fileID: 0}
   - curve:
@@ -182,25 +153,43 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 0.5810623
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 0.3
-        value: 2.8
+        time: 0.95
+        value: 0.55
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 0.5
-        value: 2.8
+        time: 1.05
+        value: 1
+        inSlope: 3.75
+        outSlope: 3.75
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.15
+        value: 1.3
+        inSlope: 3.9999988
+        outSlope: 3.9999988
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.25
+        value: 1.8
+        inSlope: 6.999999
+        outSlope: 6.999999
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.35
+        value: 2.7
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 0.70000005
-        value: 0.5810623
+        time: 1.45
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -208,7 +197,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Size.x
-    path: Ataque
+    path: ataqBomba
     classID: 61
     script: {fileID: 0}
   - curve:
@@ -216,13 +205,43 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 0.36943722
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 0.70000005
-        value: 0.36943722
+        time: 0.95
+        value: 0.55
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.05
+        value: 1
+        inSlope: 4.25
+        outSlope: 4.25
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.15
+        value: 1.4
+        inSlope: 3.9999988
+        outSlope: 3.9999988
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.25
+        value: 1.8
+        inSlope: 4.499999
+        outSlope: 4.499999
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.35
+        value: 2.3
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.45
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -230,28 +249,44 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Size.y
-    path: Ataque
+    path: ataqBomba
     classID: 61
     script: {fileID: 0}
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: d8c3dd04fcd93de499e8a5ac47ffd1b5, type: 3}
+      value: {fileID: 21300000, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
     - time: 0.1
-      value: {fileID: 21300002, guid: d8c3dd04fcd93de499e8a5ac47ffd1b5, type: 3}
+      value: {fileID: 21300008, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
+    - time: 0.2
+      value: {fileID: 21300010, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
     - time: 0.3
-      value: {fileID: 21300004, guid: d8c3dd04fcd93de499e8a5ac47ffd1b5, type: 3}
+      value: {fileID: 21300012, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
     - time: 0.4
-      value: {fileID: 21300006, guid: d8c3dd04fcd93de499e8a5ac47ffd1b5, type: 3}
+      value: {fileID: 21300014, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
     - time: 0.5
-      value: {fileID: 21300008, guid: d8c3dd04fcd93de499e8a5ac47ffd1b5, type: 3}
+      value: {fileID: 21300016, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
     - time: 0.6
-      value: {fileID: 21300010, guid: d8c3dd04fcd93de499e8a5ac47ffd1b5, type: 3}
+      value: {fileID: 21300018, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
+    - time: 0.7
+      value: {fileID: 21300020, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
+    - time: 0.8
+      value: {fileID: 21300022, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
+    - time: 0.95
+      value: {fileID: 21300024, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
+    - time: 1
+      value: {fileID: 21300026, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
+    - time: 1.1
+      value: {fileID: 21300028, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
+    - time: 1.2
+      value: {fileID: 21300030, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
+    - time: 1.3
+      value: {fileID: 21300032, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 10
+  m_SampleRate: 20
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -259,29 +294,36 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 3232609280
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3232609280
+      path: 78867442
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3232609280
-      attribute: 3305885265
+      path: 78867442
+      attribute: 413499720
       script: {fileID: 0}
       typeID: 61
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3232609280
+      path: 78867442
+      attribute: 1872933342
+      script: {fileID: 0}
+      typeID: 61
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 78867442
       attribute: 4197328169
+      script: {fileID: 0}
+      typeID: 61
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 78867442
+      attribute: 2368279999
       script: {fileID: 0}
       typeID: 61
       customType: 0
@@ -293,40 +335,27 @@ AnimationClip:
       typeID: 212
       customType: 23
       isPPtrCurve: 1
-    - serializedVersion: 2
-      path: 3232609280
-      attribute: 413499720
-      script: {fileID: 0}
-      typeID: 61
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3232609280
-      attribute: 1872933342
-      script: {fileID: 0}
-      typeID: 61
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3232609280
-      attribute: 2368279999
-      script: {fileID: 0}
-      typeID: 61
-      customType: 0
-      isPPtrCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: d8c3dd04fcd93de499e8a5ac47ffd1b5, type: 3}
-    - {fileID: 21300002, guid: d8c3dd04fcd93de499e8a5ac47ffd1b5, type: 3}
-    - {fileID: 21300004, guid: d8c3dd04fcd93de499e8a5ac47ffd1b5, type: 3}
-    - {fileID: 21300006, guid: d8c3dd04fcd93de499e8a5ac47ffd1b5, type: 3}
-    - {fileID: 21300008, guid: d8c3dd04fcd93de499e8a5ac47ffd1b5, type: 3}
-    - {fileID: 21300010, guid: d8c3dd04fcd93de499e8a5ac47ffd1b5, type: 3}
+    - {fileID: 21300000, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
+    - {fileID: 21300008, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
+    - {fileID: 21300010, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
+    - {fileID: 21300012, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
+    - {fileID: 21300014, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
+    - {fileID: 21300016, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
+    - {fileID: 21300018, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
+    - {fileID: 21300020, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
+    - {fileID: 21300022, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
+    - {fileID: 21300024, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
+    - {fileID: 21300026, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
+    - {fileID: 21300028, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
+    - {fileID: 21300030, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
+    - {fileID: 21300032, guid: 58625b1f431d4384c9ff94aa7ae5cb56, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.70000005
+    m_StopTime: 1.45
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -347,30 +376,18 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+      - serializedVersion: 2
+        time: 0.95
         value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
       - serializedVersion: 2
-        time: 0.1
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      - serializedVersion: 2
-        time: 0.3
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      - serializedVersion: 2
-        time: 0.6
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      - serializedVersion: 2
-        time: 0.70000005
+        time: 1.4
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -379,7 +396,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Ataque
+    path: ataqBomba
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -387,155 +404,43 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 0.88
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 0.3
-        value: 3
-        inSlope: 7.7999997
-        outSlope: 7.7999997
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 0.4
-        value: 4
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 0.5
-        value: 3.8
-        inSlope: -2.6666667
-        outSlope: -2.6666667
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 0.70000005
-        value: 0.88
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalPosition.x
-    path: Ataque
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 2
-        time: 0
-        value: 1.32
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 0.1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 0.3
-        value: 1.13
-        inSlope: 1.3333333
-        outSlope: 1.3333333
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 0.4
-        value: 1.4
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 0.5
-        value: 1.4
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 0.70000005
-        value: 1.32
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalPosition.y
-    path: Ataque
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 2
-        time: 0
         value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 0.70000005
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalPosition.z
-    path: Ataque
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 2
-        time: 0
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      - serializedVersion: 2
-        time: 0.3
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      - serializedVersion: 2
-        time: 0.6
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      - serializedVersion: 2
-        time: 0.70000005
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Enabled
-    path: Ataque
-    classID: 61
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 2
-        time: 0
-        value: -0.8926277
+        time: 0.95
+        value: 0.35
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 0.70000005
-        value: -0.8926277
+        time: 1.05
+        value: 0.35
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.15
+        value: 0.35
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.25
+        value: 0.3
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.35
+        value: 0.3
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.45
+        value: 0.35
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -543,7 +448,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Offset.x
-    path: Ataque
+    path: ataqBomba
     classID: 61
     script: {fileID: 0}
   - curve:
@@ -551,13 +456,43 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 0.2086587
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 0.70000005
-        value: 0.2086587
+        time: 0.95
+        value: 1.45
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.05
+        value: 1.45
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.15
+        value: 1.45
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.25
+        value: 1.45
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.35
+        value: 1.45
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.45
+        value: 1.45
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -565,7 +500,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Offset.y
-    path: Ataque
+    path: ataqBomba
     classID: 61
     script: {fileID: 0}
   - curve:
@@ -573,25 +508,43 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 0.5810623
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 0.3
-        value: 2.8
+        time: 0.95
+        value: 0.55
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 0.5
-        value: 2.8
+        time: 1.05
+        value: 1
+        inSlope: 3.75
+        outSlope: 3.75
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.15
+        value: 1.3
+        inSlope: 3.9999988
+        outSlope: 3.9999988
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.25
+        value: 1.8
+        inSlope: 6.999999
+        outSlope: 6.999999
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.35
+        value: 2.7
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 0.70000005
-        value: 0.5810623
+        time: 1.45
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -599,7 +552,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Size.x
-    path: Ataque
+    path: ataqBomba
     classID: 61
     script: {fileID: 0}
   - curve:
@@ -607,13 +560,43 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 0.36943722
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 0.70000005
-        value: 0.36943722
+        time: 0.95
+        value: 0.55
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.05
+        value: 1
+        inSlope: 4.25
+        outSlope: 4.25
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.15
+        value: 1.4
+        inSlope: 3.9999988
+        outSlope: 3.9999988
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.25
+        value: 1.8
+        inSlope: 4.499999
+        outSlope: 4.499999
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.35
+        value: 2.3
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.45
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -621,7 +604,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Size.y
-    path: Ataque
+    path: ataqBomba
     classID: 61
     script: {fileID: 0}
   m_EulerEditorCurves: []

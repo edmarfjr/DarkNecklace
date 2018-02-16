@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityStandardAssets.CrossPlatformInput;
 
 public class cacadoraScript : MonoBehaviour {
     public GameObject[] itemArremeco;
@@ -64,9 +63,16 @@ public class cacadoraScript : MonoBehaviour {
     public int escudoDivino;
     public bool andaDir;
     public bool bloq;
+    public bool andaDirTouch;
+    public bool andaEsqTouch;
+    public GameObject armaObj;
+    public bool envenenada;
+    public float tempVeneno;
+    public float auxVeneno;
 
     // Use this for initialization
     void Start () {
+        tempVeneno = 0;
         gStatus = GameObject.FindGameObjectWithTag("gameStatus");
         GameStatus gs = gStatus.GetComponent<GameStatus>();
         armaTipo = gs.armaTipo;
@@ -98,6 +104,8 @@ public class cacadoraScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+       // Arma Armascript = armaObj.GetComponent<Arma>();
+       // Armascript.chamaArma();
         muni.text = municao.ToString();
         if (vida > vidaMax)
             vida = vidaMax;
@@ -127,19 +135,26 @@ public class cacadoraScript : MonoBehaviour {
         {
             somAndaTemp -= Time.deltaTime;
         }
-        
+        if (tempVeneno>0)
+        {
+            tempVeneno -= Time.deltaTime;
+        }
+        if (auxVeneno > 0)
+        {
+            auxVeneno -= Time.deltaTime;
+        }
 
-		if (estaNoChao == true)
+        if (estaNoChao == true)
 			anim.SetBool ("chao", true);
 		else
 			anim.SetBool ("chao", false);
 
 		Andar ();
 		Pular ();
-		StartCoroutine (Ataque ());
+        StartCoroutine (Ataque ());
         StartCoroutine (AtaqueEsp ());
         StartCoroutine (Esquivar ());
-
+        veneno();
 		if (isRunningCoroutine == false) {
 			StartCoroutine (RegeneraVigor ());
 		}
@@ -168,8 +183,42 @@ public class cacadoraScript : MonoBehaviour {
 		
 
 	}
+    IEnumerator piscaCor()
+    {
+        GetComponent<SpriteRenderer>().color = Color.green;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<SpriteRenderer>().color = Color.white;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<SpriteRenderer>().color = Color.green;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<SpriteRenderer>().color = Color.white;
+    }
+    void veneno()
+    {
+        if (tempVeneno>0)
+        {
+            envenenada = true;
+        }
+        else
+        {
+            envenenada = false;
+        }
+        
+        if (envenenada)
+        {
 
+            
+            Debug.Log(auxVeneno);
+            if(auxVeneno <= 0)
+            {
+                auxVeneno = 2;
+                StartCoroutine(piscaCor());
+                vida -= 1;
 
+            }
+            
+        }
+    }
 
     void Andar ()
 	{	if (andasom == true && somAndaTemp<=0 && estaNoChao&&!dash)
@@ -181,7 +230,15 @@ public class cacadoraScript : MonoBehaviour {
 			
 			if (invencibilidade <= 0) {
                 x = Input.GetAxis("Horizontal");
-                if(x>0)
+                if (andaDirTouch)
+                {
+                    x = 1;
+                }
+                if (andaEsqTouch)
+                {
+                    x = -1;
+                }
+                if (x>0)
                 { andaDir = true; }
                 if (x <= 0)
                 { andaDir = false; }
@@ -194,14 +251,11 @@ public class cacadoraScript : MonoBehaviour {
                 {
                     rbd.velocity = new Vector2(x * velAnda, rbd.velocity.y);
                 }
-               
-               
-            } else {
-                x = 0;
-                
-            }
-			
+              
 
+            } else {
+                x = 0;                
+            }			
 			if (x == 0) {
 				anim.SetBool ("movendo", false);
                 andasom = false;
@@ -209,16 +263,13 @@ public class cacadoraScript : MonoBehaviour {
 				anim.SetBool ("movendo", true);
                 andasom = true;
             }
-			if (x > 0) {
+			if (x > 0||andaDirTouch) {
 				direita = true;
-				transform.localScale = new Vector2 (1, 1);
-			
-					
+				transform.localScale = new Vector2 (1, 1);				
 			}
-			if (x < 0) {
+			if (x < 0||andaEsqTouch) {
 				direita = false;
                 transform.localScale = new Vector2(-1, 1);
-
             }
 	} else if(atacou == true)  {
 		rbd.velocity = new Vector2 (0, rbd.velocity.y);
@@ -259,6 +310,8 @@ public class cacadoraScript : MonoBehaviour {
             Debug.Log(bloq);
         }
     }
+
+    
     void Pular()
 	{
 		if (Input.GetButtonDown("Jump") && estaNoChao && !dash) {
@@ -583,5 +636,236 @@ public class cacadoraScript : MonoBehaviour {
         sfxSource.clip = clip[randomIndex];
         sfxSource.pitch = randomPitch;
         sfxSource.Play();
+    }
+    public void andarDireitaTouch()
+    {
+        andaDirTouch = true;
+    }
+    public void andarEsquerdaTouch()
+    {
+        andaEsqTouch = true;
+    }
+    public void andarDireitaTouchF()
+    {
+        andaDirTouch = false;
+    }
+    public void andarEsquerdaTouchF()
+    {
+        andaEsqTouch = false;
+    }
+    public IEnumerator ataqueTouch()
+    {
+        if (atacou == false && vigor > 0 && dead == false && !estaNoChao)
+        {
+            if (armaTipo == "espadaCurta")
+            {
+
+                vigor -= 4;
+                PlaySingle(ataca1, 1);
+                atacou = true;
+                anim.SetBool("ataque", true);
+                yield return new WaitForSeconds(0.4f);
+                anim.SetBool("ataque", false);
+                atacou = false;
+
+            }
+
+            if (armaTipo == "adaga")
+            {
+
+                vigor -= 2;
+
+                PlaySingle(ataca1, 1.3f);
+
+                atacou = true;
+                float x = 0;
+                float aux = Random.Range(0, 100);
+                if (aux < 33)
+                    x = 0;
+                if (aux > 33 && aux < 66)
+                    x = 0.5f;
+                if (aux > 66)
+                    x = 1;
+
+                anim.SetBool("ataqueAdaga", true);
+                anim.SetFloat("adaga", x);
+
+                yield return new WaitForSeconds(0.3f);
+
+                anim.SetBool("ataqueAdaga", false);
+                atacou = false;
+
+            }
+            if (armaTipo == "machado")
+            {
+
+                vigor -= 6;
+                PlaySingle(ataca1, 0.7f);
+
+                atacou = true;
+
+                anim.SetBool("ataqueMachado", true);
+
+                yield return new WaitForSeconds(1f);
+
+                anim.SetBool("ataqueMachado", false);
+                atacou = false;
+
+            }
+            if (armaTipo == "espadao")
+            {
+
+                vigor -= 4;
+                yield return new WaitForSeconds(0.1f);
+                PlaySingle(ataca1, 0.6f);
+
+                atacou = true;
+
+                anim.SetBool("ataqueEspadao", true);
+
+                yield return new WaitForSeconds(0.9f);
+
+                anim.SetBool("ataqueEspadao", false);
+                atacou = false;
+
+            }
+            if (armaTipo == "lanca")
+            {
+
+                vigor -= 4;
+                PlaySingle(ataca1, 1f);
+
+                atacou = true;
+
+                anim.SetBool("ataqueLanca", true);
+
+                yield return new WaitForSeconds(0.7f);
+
+                anim.SetBool("ataqueLanca", false);
+                atacou = false;
+
+            }
+            if (armaTipo == "rapier")
+            {
+
+                vigor -= 3;
+                PlaySingle(ataca1, 0.9f);
+
+                atacou = true;
+
+                anim.SetBool("rapier", true);
+
+                yield return new WaitForSeconds(0.6f);
+
+                anim.SetBool("rapier", false);
+                atacou = false;
+
+            }
+        }
+    }
+    public void chamaAtaqueTouch()
+    {
+        StartCoroutine(ataqueTouch());
+    }
+    public void chamaAtaqueEspTouch()
+    {
+        StartCoroutine(ataqueEspTouch());
+    }
+    public void chamaDashTouch()
+    {
+        StartCoroutine(DashTouch());
+    }
+    public IEnumerator ataqueEspTouch()
+    {
+        if(atacou == false  && dead == false && municao > 0 && !estaNoChao && !dash)
+        {
+            if (itemTipo == "facaArremeco")
+            {
+                
+                    // vigor -= 2;
+                    PlaySingle(ataca1, 1.4f);
+                    atacou = true;
+                    anim.SetBool("throw", true);
+                    yield return new WaitForSeconds(0.2f);
+                    criaItem();
+                    yield return new WaitForSeconds(0.3f);
+                    anim.SetBool("throw", false);
+                    atacou = false;
+                    municao -= 1;
+                
+            }
+            if (itemTipo == "pistola")
+            {
+                
+                    // vigor -= 2;
+                    PlaySingle(ataca1, 1.4f);
+                    atacou = true;
+                    anim.SetBool("pistola", true);
+                    yield return new WaitForSeconds(0.2f);
+                    criaItem();
+                    yield return new WaitForSeconds(0.6f);
+                    anim.SetBool("pistola", false);
+                    atacou = false;
+                    municao -= 1;
+                
+            }
+            if (itemTipo == "bombaIncend")
+            {
+               
+                
+                    // vigor -= 2;
+                    PlaySingle(ataca1, 1.4f);
+                    atacou = true;
+                    anim.SetBool("bombaIncend", true);
+                    yield return new WaitForSeconds(0.2f);
+                    criaItem();
+                    yield return new WaitForSeconds(0.3f);
+                    anim.SetBool("bombaIncend", false);
+                    atacou = false;
+                    municao -= 1;
+                
+            }
+            if (itemTipo == "lancaMagi")
+            {
+
+                {
+                    // vigor -= 4;
+                    // PlaySingle (ataca1);
+                    atacou = true;
+                    anim.SetBool("ataqueEsp", true);
+                    yield return new WaitForSeconds(0.8f);
+                    anim.SetBool("ataqueEsp", false);
+                    atacou = false;
+                    municao -= 1;
+                }
+            }
+        }
+        
+    }
+
+    public IEnumerator DashTouch()
+    {
+        if (!estaNoChao && vigor >= 1 && dash == false && dead == false && invencibilidade <= 0)
+        {
+            
+            Debug.Log("cu");
+            dash = true;
+            PlaySingle(dash1, 1.3f);
+            anim.SetBool("esquiva", true);
+            if (direita == true)
+            {
+                rbd.velocity = new Vector2(esquiva, rbd.velocity.y);
+            }
+            else
+            {
+                rbd.velocity = new Vector2(-esquiva, rbd.velocity.y);
+
+            }
+            vigor -= 4;
+            yield return new WaitForSeconds(1);
+            anim.SetBool("esquiva", false);
+            dash = false;
+            velocidade = 7;
+        }
     }
 }
