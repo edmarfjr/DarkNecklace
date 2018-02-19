@@ -288,25 +288,26 @@ MonoBehaviour:
   rbd: {fileID: 0}
   PC: {fileID: 0}
   drops:
-  - {fileID: 1274592268682460, guid: 1239da16499f686478bf1fad1c4266a8, type: 2}
-  - {fileID: 1636039725023690, guid: 95d76dbadf5eeac4fbcf772da21bf175, type: 2}
-  - {fileID: 1069083353837996, guid: a53a7ef81d668554bb8f6dc0dd0a47d3, type: 2}
-  vida: 40
-  vidaMax: 40
-  atacando: 0
-  esperataq1: 0
-  esperataq2: 0
-  anim: {fileID: 0}
+  - {fileID: 1288885845934268, guid: 974bae1706861f6448797d794a00a813, type: 2}
+  - {fileID: 1394476376273976, guid: a2eb6d34352f83942afbe4ae10000720, type: 2}
+  - {fileID: 1803417349156938, guid: a0ab6a7a7405e354ab58a38f7bb7f185, type: 2}
   checaini: {fileID: 0}
-  morreu: 0
   pedraPois: {fileID: 4873673134996894}
   pedraObj: {fileID: 1153639214552060, guid: e8d9c212b09df9943ac4989a25117fdb, type: 2}
+  anim: {fileID: 0}
   vet1: {fileID: 0}
   vet2: {fileID: 0}
+  vida: 40
+  vidaMax: 40
   pedrasN: 0
   numPedras: 10
-  ativo: 0
+  esperataq1: 0
+  esperataq2: 0
   dire: 0
+  atacando: 0
+  morreu: 0
+  ativo: 0
+  golpeado: 0
 --- !u!212 &212722622121351446
 SpriteRenderer:
   m_ObjectHideFlags: 1

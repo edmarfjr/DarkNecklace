@@ -1,12 +1,13 @@
 fileFormatVersion: 2
 guid: 2d7035f4a3fb9614cacc0e9788225e83
-timeCreated: 1510696244
+timeCreated: 1519038673
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: espinho_0
     21300002: espinho_1
     21300004: espinho_2
+    21300006: espinho_3
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -85,9 +86,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 108
+        y: 162
         width: 117
-        height: 9
+        height: 54
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -99,9 +100,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 54
+        y: 108
         width: 117
-        height: 36
+        height: 54
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,6 +111,20 @@ TextureImporter:
       tessellationDetail: 0
     - serializedVersion: 2
       name: espinho_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 54
+        width: 117
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: espinho_3
       rect:
         serializedVersion: 2
         x: 0

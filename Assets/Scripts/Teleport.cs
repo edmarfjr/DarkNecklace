@@ -99,7 +99,7 @@ public class Teleport : MonoBehaviour {
             while(cont<aux)
             {
 
-                float posx = Random.Range(vet1.transform.position.x, vet2.transform.position.x);
+                float posx = Random.Range(vet1.transform.position.x+2*cont, vet2.transform.position.x-2 * cont);
                 Vector3 pos = new Vector3(posx, vet1.transform.position.y, -1);
                 Instantiate(armadilha, pos, Quaternion.identity);
                 cont += 1;

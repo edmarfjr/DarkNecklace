@@ -46,7 +46,7 @@ public class item_bota : MonoBehaviour {
                 {
                     this.gameObject.transform.localScale = new Vector2(0, 0);
                     scriPC.moedas -= preco;
-                    scriPC.velocidade += 2;
+                    scriPC.velAnda += 1;
                     comprou = true;
                     Destroy(this.gameObject,2f);
                 }

@@ -43,7 +43,7 @@ public class GameStatus : MonoBehaviour {
         moedas = scrPc.moedas;
         armadura = scrPc.armadura;
         bonusAtaque = scrPc.bonusAtaque;
-        velocidade = scrPc.velocidade;
+        velocidade = scrPc.velAnda;
     }
 
     public void zeraStatus()

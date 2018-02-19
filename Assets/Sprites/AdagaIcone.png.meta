@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b8a1de698d7615643993b4c8d3ddc02d
-timeCreated: 1511563985
+timeCreated: 1519039020
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -84,12 +84,12 @@ TextureImporter:
       name: AdagaIcone_0
       rect:
         serializedVersion: 2
-        x: 63
-        y: 297
-        width: 36
-        height: 189
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 270
+        width: 180
+        height: 270
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -98,12 +98,12 @@ TextureImporter:
       name: AdagaIcone_1
       rect:
         serializedVersion: 2
-        x: 234
-        y: 288
-        width: 54
-        height: 207
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 180
+        y: 270
+        width: 180
+        height: 270
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -112,12 +112,12 @@ TextureImporter:
       name: AdagaIcone_2
       rect:
         serializedVersion: 2
-        x: 45
-        y: 9
-        width: 72
-        height: 225
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 180
+        height: 270
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

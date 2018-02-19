@@ -10,17 +10,20 @@ public class placaPedra : MonoBehaviour
     public bool abriu;
     public string texto;
     public Transform obj;
+    public Animator anim;
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         obj = GetComponent<Transform>();
     }
 
     void Update()
     {
-        Collider2D toqueTele;
-        toqueTele = Physics2D.OverlapCircle(this.transform.position, 0.5f, layerPC);
-        if(toqueTele)
+        Collider2D toque;
+        toque = Physics2D.OverlapCircle(this.transform.position, 2.5f, layerPC);
+        anim.SetBool("aceso", toque);
+        if (toque)
         {
             abriu = true;
         }

@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 50477128004321850}
   - component: {fileID: 61544328345467428}
   - component: {fileID: 114070890344972128}
-  - component: {fileID: 61197508187647732}
+  - component: {fileID: 58024059412408044}
   m_Layer: 18
   m_Name: BombaIncendiaria
   m_TagString: ataque
@@ -57,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1197027762564188}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.61008, y: -15.540222, z: 0}
+  m_LocalPosition: {x: -29.332653, y: -15.114841, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4821496139921810}
@@ -91,7 +91,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -117,8 +117,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61197508187647732
-BoxCollider2D:
+--- !u!58 &58024059412408044
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -129,19 +129,9 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.05292225, y: 0.7350001}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.4198146, y: 0}
-    oldSize: {x: 0.66, y: 1.4700001}
-    newSize: {x: 0.66, y: 1.4700001}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: 0.32164848}
   serializedVersion: 2
-  m_Size: {x: 0.66, y: 1.4700001}
-  m_EdgeRadius: 0
+  m_Radius: 0.35583717
 --- !u!61 &61544328345467428
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -179,7 +169,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0.010850906, y: 0.32551527}
+  m_Offset: {x: -0.009523392, y: 0.28727722}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -190,7 +180,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.69617844, y: 0.80469036}
+  m_Size: {x: 1.1550407, y: 0.5943794}
   m_EdgeRadius: 0
 --- !u!95 &95603048296683740
 Animator:
@@ -220,10 +210,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0253630b2d828724a821777cf727c367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: 5
-  y: 5
+  x: 6
+  y: 6
   anim: {fileID: 0}
-  temp: 4
+  temp: 3
 --- !u!114 &114605156713866946
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -236,6 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dano: 1
+  bonusAtaq: 0
   knockback: 0
   PC: {fileID: 0}
 --- !u!212 &212003138996784394

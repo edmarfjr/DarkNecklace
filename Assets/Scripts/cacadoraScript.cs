@@ -148,18 +148,21 @@ public class cacadoraScript : MonoBehaviour {
 			anim.SetBool ("chao", true);
 		else
 			anim.SetBool ("chao", false);
-
-		Andar ();
-		Pular ();
-        StartCoroutine (Ataque ());
-        StartCoroutine (AtaqueEsp ());
-        StartCoroutine (Esquivar ());
+        if(Time.timeScale>0)
+        {
+            Andar();
+            Pular();
+            StartCoroutine(Ataque());
+            StartCoroutine(AtaqueEsp());
+            StartCoroutine(Esquivar());
+        }
+		
         veneno();
 		if (isRunningCoroutine == false) {
 			StartCoroutine (RegeneraVigor ());
 		}
 
-		Esquivar ();
+		//Esquivar ();
 
 		if (vida <= 0) {
             dead = true;
