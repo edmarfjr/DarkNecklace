@@ -23,10 +23,7 @@ public class pantera_col : MonoBehaviour {
             Pantera scr = rbd.gameObject.GetComponent<Pantera>();
             if (col.tag.Equals("ataque"))
             {
-                Arma dano = col.gameObject.GetComponent<Arma>();
-
-
-
+                PegaAtaque dano = col.gameObject.GetComponent<PegaAtaque>();
                 Rigidbody2D ribd = rbd.GetComponent<Rigidbody2D>();
                 if (ribd.transform.position.x < col.transform.position.x)
                 {

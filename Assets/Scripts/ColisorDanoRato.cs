@@ -22,10 +22,7 @@ public class ColisorDanoRato : MonoBehaviour {
             Ratman scr = rat.gameObject.GetComponent<Ratman>();
             if (col.tag.Equals("ataque"))
             {
-                Arma dano = col.gameObject.GetComponent<Arma>();
-
-
-
+                PegaAtaque dano = col.gameObject.GetComponent<PegaAtaque>();
                 Rigidbody2D rbd = rat.GetComponent<Rigidbody2D>();
                 if (rbd.transform.position.x < col.transform.position.x)
                 {
@@ -64,10 +61,7 @@ public class ColisorDanoRato : MonoBehaviour {
             ratmanXaman scr = rat.gameObject.GetComponent<ratmanXaman>();
             if (col.tag.Equals("ataque"))
             {
-                Arma dano = col.gameObject.GetComponent<Arma>();
-
-
-
+                PegaAtaque dano = col.gameObject.GetComponent<PegaAtaque>();
                 Rigidbody2D rbd = rat.GetComponent<Rigidbody2D>();
                 if (rbd.transform.position.x < col.transform.position.x)
                 {

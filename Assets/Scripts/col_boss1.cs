@@ -23,11 +23,8 @@ public class col_boss1 : MonoBehaviour {
             Bearman scr = bear.gameObject.GetComponent<Bearman>();
             if (col.tag.Equals("ataque"))
             {
-                Arma dano = col.gameObject.GetComponent<Arma>();
-
-
-
-                Rigidbody2D rbd = bear.GetComponent<Rigidbody2D>();
+            PegaAtaque dano = col.gameObject.GetComponent<PegaAtaque>();
+            Rigidbody2D rbd = bear.GetComponent<Rigidbody2D>();
                 if (rbd.transform.position.x < col.transform.position.x)
                 {
 

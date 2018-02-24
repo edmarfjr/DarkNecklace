@@ -23,7 +23,7 @@ public class worm_col : MonoBehaviour {
         worm scr = rbd.gameObject.GetComponent<worm>();
         if (col.tag.Equals("ataque"))
         {
-            Arma dano = col.gameObject.GetComponent<Arma>();
+            PegaAtaque dano = col.gameObject.GetComponent<PegaAtaque>();
 
             scr.tomouDano(dano.dano, dano.knockback);
         }

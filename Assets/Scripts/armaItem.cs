@@ -15,10 +15,12 @@ public class armaItem : MonoBehaviour {
     public int preco;
     public bool semGrana;
     public bool arremeco;
+    public GUIStyle style;
     // Use this for initialization
     void Start () {
         GameObject aux = GameObject.FindWithTag("Player");
         PC = aux;
+        style.normal.textColor = Color.white;
     }
 	
 	// Update is called once per frame
@@ -68,8 +70,8 @@ public class armaItem : MonoBehaviour {
         {
             if (semGrana == false)
             {
-                GUI.Label(new Rect(Screen.height / 1.2f, Screen.width / 3 - 50, 100, 100), texto);
-                GUI.Label(new Rect(Screen.height / 1.2f, Screen.width / 3, 100, 100), preco.ToString());
+                GUI.Label(new Rect(Screen.height / 1.2f, Screen.width / 3 - 50, 100, 100), texto, style);
+                GUI.Label(new Rect(Screen.height / 1.2f, Screen.width / 3, 100, 100), preco.ToString(), style);
             }
             if(semGrana == true)
             {

@@ -18,7 +18,7 @@ public class col_golemBoss : MonoBehaviour {
         golemBoss scr = rbd.gameObject.GetComponent<golemBoss>();
         if (col.tag.Equals("ataque"))
         {
-            Arma dano = col.gameObject.GetComponent<Arma>();
+            PegaAtaque dano = col.gameObject.GetComponent<PegaAtaque>();
             scr.tomouDano(dano.dano, dano.knockback);
         }
         if (col.tag.Equals("itemArremeco"))

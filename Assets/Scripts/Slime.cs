@@ -90,7 +90,7 @@ public class Slime : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col){
 		if (col.tag.Equals ("ataque")) {
-            Arma dano = col.gameObject.GetComponent<Arma>();
+            PegaAtaque dano = col.gameObject.GetComponent<PegaAtaque>();
             float kn = dano.knockback;
             StartCoroutine(piscaCor());
             if (personagem.position.x > slime.position.x) {

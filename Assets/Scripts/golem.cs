@@ -22,6 +22,7 @@ public class golem : MonoBehaviour {
     public float distAtaq;
     public BoxCollider2D coll;
     public bool dropou;
+    public float tempoRola;
     // Use this for initialization
     void Start () {
         morreu = false;
@@ -39,10 +40,14 @@ public class golem : MonoBehaviour {
         {
             esperAtaq = esperAtaq - Time.deltaTime;
         }
+        if(tempoRola>0)
+        {
+            tempoRola -= Time.deltaTime;
+        }
         dire();
         alcanceAtaque();
         StartCoroutine(ataque());
-        if (atacando)
+        if (atacando&&tempoRola>0)
         {
             coll.enabled = false;
             moveAtaque();
@@ -145,6 +150,7 @@ public class golem : MonoBehaviour {
                 dir = -1;
                 anim.SetBool("rolando", true);
                 yield return new WaitForSeconds(0.5f);
+                tempoRola = 0.7f;
                 atacando = true;
                 yield return new WaitForSeconds(0.7f);
                 atacando = false;
@@ -156,6 +162,7 @@ public class golem : MonoBehaviour {
                 dir = 1;
                 anim.SetBool("rolando", true);
                 yield return new WaitForSeconds(0.5f);
+                tempoRola = 0.7f;
                 atacando = true;
                 yield return new WaitForSeconds(0.7f);
                 atacando = false;

@@ -29,6 +29,7 @@ public class Pantera : MonoBehaviour
     public AudioClip ataq;
     public AudioClip hit;
     public AudioSource sfxSource;
+    public float tempoPulo;
 
     // Use this for initialization
     void Start()
@@ -64,14 +65,23 @@ public class Pantera : MonoBehaviour
         {
             anim.SetBool("golpeado", false);
         }
+        if (tempoPulo > 0)
+        {
+            tempoPulo = tempoPulo - Time.deltaTime;
+        }
         agrar();
         dirPant();
         alcanceAtaque();
         StartCoroutine(ataque());
         if (atacando && tempStag <= 0)
         {
-            coll.enabled = false;
-            moveAtaque();
+            
+            if(tempoPulo<=1.8f)
+            {
+                coll.enabled = false;
+                moveAtaque();
+            }
+            
         }
         if (atacando == false && tempStag <= 0)
         {
@@ -161,6 +171,7 @@ public class Pantera : MonoBehaviour
             
             if (posInicio.x > posPC.x && !atacando)
             {
+                tempoPulo = 2.1f;
                 atacando = true;
                 PlaySingle(ataq, 0.6f);
                 dir = -1;
@@ -172,6 +183,7 @@ public class Pantera : MonoBehaviour
             }
             if (posInicio.x < posPC.x && !atacando)
             {
+                tempoPulo = 2.1f;
                 atacando = true;
                 PlaySingle(ataq, 0.6f);
                 dir = 1;
@@ -189,8 +201,7 @@ public class Pantera : MonoBehaviour
     void moveAtaque()
     {
         if (tempStag <= 0)
-        {
-            
+        {           
             rbd.velocity = new Vector2(vel * 2.5f * dir, rbd.velocity.y);
         }
     }

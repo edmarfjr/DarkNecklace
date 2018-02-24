@@ -29,7 +29,11 @@ public class imagemSubarmaMenu : MonoBehaviour {
         if (script.itemTipo == "bombaIncend")
         {
             armaMenu.sprite = arma[2];
-        }       
+        }
+        if (script.itemTipo == "rifle")
+        {
+            armaMenu.sprite = arma[3];
+        }
     }
 }
 

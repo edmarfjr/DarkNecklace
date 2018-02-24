@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 61544328345467428}
   - component: {fileID: 114070890344972128}
   - component: {fileID: 58024059412408044}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: BombaIncendiaria
   m_TagString: ataque
   m_Icon: {fileID: 0}
@@ -42,10 +42,10 @@ GameObject:
   - component: {fileID: 4821496139921810}
   - component: {fileID: 50740848345437310}
   - component: {fileID: 61976642342040676}
-  - component: {fileID: 114605156713866946}
+  - component: {fileID: 114252686757620176}
   m_Layer: 14
   m_Name: fogo
-  m_TagString: ataque
+  m_TagString: itemArremeco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1197027762564188}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -29.332653, y: -15.114841, z: 0}
+  m_LocalPosition: {x: -21.304, y: -14.555597, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4821496139921810}
@@ -214,7 +214,7 @@ MonoBehaviour:
   y: 6
   anim: {fileID: 0}
   temp: 3
---- !u!114 &114605156713866946
+--- !u!114 &114252686757620176
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -222,11 +222,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1600907064572902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6af9cd21d451e24fa1b35e2f0f0cfd5, type: 3}
+  m_Script: {fileID: 11500000, guid: c142a6f1436ad6648abafdbfd73a1c49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dano: 1
-  bonusAtaq: 0
+  dano: 0
   knockback: 0
   PC: {fileID: 0}
 --- !u!212 &212003138996784394

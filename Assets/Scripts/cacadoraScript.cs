@@ -121,7 +121,7 @@ public class cacadoraScript : MonoBehaviour {
         estaNoChao = Physics2D.Linecast (pe.transform.position, transform.position, 1 << LayerMask.NameToLayer ("Piso"));
         Arma scrArma = arma.GetComponent<Arma>();
         invencivel();
-        dano = scrArma.dano;
+      
         if (invencibilidade > 0)
         {
             knockCont -= Time.deltaTime;
@@ -396,6 +396,22 @@ public class cacadoraScript : MonoBehaviour {
                 municao -= 1;
             }
         }
+        if (itemTipo == "rifle")
+        {
+            if (Input.GetButtonDown("Fire2") && atacou == false && vigor > 0 && dead == false && municao > 0 && estaNoChao)
+            {
+                // vigor -= 2;
+                PlaySingle(ataca1, 1.6f);
+                atacou = true;
+                anim.SetBool("rifle", true);
+                yield return new WaitForSeconds(0.2f);
+                criaItem();
+                yield return new WaitForSeconds(0.6f);
+                anim.SetBool("rifle", false);
+                atacou = false;
+                municao -= 1;
+            }
+        }
         if (itemTipo == "bombaIncend")
         {
             if (Input.GetButtonDown("Fire2") && atacou == false && vigor > 0 && dead == false && municao > 0 && estaNoChao)
@@ -600,7 +616,7 @@ public class cacadoraScript : MonoBehaviour {
         if (col.gameObject.tag == "Moeda" && atacou == false)
         {
             int i = Random.Range(1, 5);
-            moedas += i;
+            moedas += i/2;
          PlaySingle(pegaMoeda, 1.4f);
             Destroy(col.gameObject);
         }
@@ -621,6 +637,11 @@ public class cacadoraScript : MonoBehaviour {
         if (itemTipo == "bombaIncend")
         {
             GameObject cloneItem = Instantiate(itemArremeco[2], new Vector2(posiItemArremeco.position.x, posiItemArremeco.position.y), Quaternion.identity);
+            cloneItem.transform.localScale = this.transform.localScale;
+        }
+        if (itemTipo == "rifle")
+        {
+            GameObject cloneItem = Instantiate(itemArremeco[3], new Vector2(posiItemArremeco.position.x, posiItemArremeco.position.y), Quaternion.identity);
             cloneItem.transform.localScale = this.transform.localScale;
         }
     }

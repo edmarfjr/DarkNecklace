@@ -90,7 +90,7 @@ Grid:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1912827550669966}
   m_Enabled: 1
-  m_CellSize: {x: 1, y: 1, z: 0}
+  m_CellSize: {x: 1.3399999, y: 2.6999998, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
@@ -353,23 +353,23 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {r: 2.3804266e-35, g: 0, b: 21.407335, a: 1e-45}
   - m_RefCount: 1
-    m_Data: {r: 0.9838592, g: 0.5628025, b: 0.6779356, a: 1}
+    m_Data: {r: 0.814107, g: 0.387072, b: 0.44911322, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.78439254, g: 0.5483781, b: 0.57850766, a: 1}
+    m_Data: {r: 0.8004591, g: 0.3378337, b: 0.39517877, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.8142922, g: 0.507318, b: 0.55063015, a: 1}
+    m_Data: {r: 0.8664738, g: 0.49424198, b: 0.54957646, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.9332362, g: 0.46079668, b: 0.51755404, a: 1}
+    m_Data: {r: 0.76565534, g: 0.48230222, b: 0.53866905, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.8430841, g: 0.5799053, b: 0.6061963, a: 1}
+    m_Data: {r: 0.96429485, g: 0.6054985, b: 0.6824165, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.8742804, g: 0.3542765, b: 0.50102353, a: 1}
+    m_Data: {r: 0.9610861, g: 0.47749043, b: 0.57732946, a: 1}
   - m_RefCount: 6
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.7747508, g: 0.49056977, b: 0.51806086, a: 1}
+    m_Data: {r: 0.8887776, g: 0.5885649, b: 0.6779031, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.88824093, g: 0.41619003, b: 0.42206085, a: 1}
+    m_Data: {r: 0.8483624, g: 0.52111465, b: 0.61706555, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -2, y: -1, z: 0}

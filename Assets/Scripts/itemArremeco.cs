@@ -25,9 +25,13 @@ public class itemArremeco : MonoBehaviour {
         if (scriPC.itemTipo == "pistola")
         {
             dano = 2;
-            knockback = 0.5f;
+            knockback = 0.8f;
         }
-
+        if (scriPC.itemTipo == "rifle")
+        {
+            dano = 2;
+            knockback = 1.2f;
+        }
 
     }
 }

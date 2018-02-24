@@ -25,7 +25,7 @@ public class inventarioItem : MonoBehaviour {
         {
             invent.sprite = item[1];
         }
-        if (scriPC.itemTipo == "pistola")
+        if (scriPC.itemTipo == "pistola" || scriPC.itemTipo == "rifle")
         {
             invent.sprite = item[2];
         }

@@ -12,7 +12,7 @@ public class ataqueUnidade : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        PC = GameObject.FindGameObjectWithTag("ataque");
+        PC = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
         deze = GetComponent<Image>();
     }

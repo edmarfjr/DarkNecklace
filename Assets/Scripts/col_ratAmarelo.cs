@@ -18,7 +18,7 @@ public class col_ratAmarelo : MonoBehaviour {
         RatoAmareloBoss scr = rbd.gameObject.GetComponent<RatoAmareloBoss>();
         if (col.tag.Equals("ataque"))
         {
-            Arma dano = col.gameObject.GetComponent<Arma>();           
+            PegaAtaque dano = col.gameObject.GetComponent<PegaAtaque>();
             StartCoroutine(scr.tomouDano(dano.dano, dano.knockback));
         }
         if (col.tag.Equals("itemArremeco"))

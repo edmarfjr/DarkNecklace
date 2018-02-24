@@ -18,6 +18,7 @@ public class morcego : MonoBehaviour
     public cacadoraScript pcScr;
     public bool alcAtaq;
     public float tempStag;
+    public float tempAtaq;
     public float distAgro;
     public float distAtaq;
     public float esperAtaq;
@@ -50,6 +51,10 @@ public class morcego : MonoBehaviour
         {
             esperAtaq = esperAtaq - Time.deltaTime;
         }
+        if(tempAtaq>0)
+        {
+            tempAtaq -= Time.deltaTime;
+        }
         if(tempStag>0)
         {
             anim.SetBool("golpeado", true);
@@ -62,7 +67,7 @@ public class morcego : MonoBehaviour
         //andar();
         alcanceAtaque();
         StartCoroutine(ataque());
-        if (atacando && tempStag<=0)
+        if (atacando && tempStag<=0 && tempAtaq>0)
             moveAtaque();
         if (atacando==false && tempStag <= 0)
             andar();
@@ -136,6 +141,7 @@ public class morcego : MonoBehaviour
             if (posInicio.x > posPC.x&& !atacando)
             {
                 atacando = true;
+                tempAtaq = 1.1f;
                 dir = -1;
                 anim.SetBool("atacando", true);
                 yield return new WaitForSeconds(1.1f);
@@ -146,6 +152,7 @@ public class morcego : MonoBehaviour
             if (posInicio.x < posPC.x && !atacando)
             {
                 atacando = true;
+                tempAtaq = 1.1f;
                 dir = 1;
                 anim.SetBool("atacando", true);
                 yield return new WaitForSeconds(1.1f);
@@ -169,7 +176,7 @@ public class morcego : MonoBehaviour
         if (col.tag.Equals("ataque"))
         { 
             tempStag =0.6f;
-            Arma dano = col.gameObject.GetComponent<Arma>();
+            PegaAtaque dano = col.gameObject.GetComponent<PegaAtaque>();
             float kn = dano.knockback;
             if (personagem.position.x > rbd.position.x)
             {

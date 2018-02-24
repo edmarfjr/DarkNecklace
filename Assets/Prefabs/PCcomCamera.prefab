@@ -68,14 +68,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4912720372115556}
   - component: {fileID: 61830233522569896}
-  - component: {fileID: 114421905047380308}
+  - component: {fileID: 114644840880080340}
   m_Layer: 10
   m_Name: Ataque
   m_TagString: ataque
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1394041547596914
 GameObject:
   m_ObjectHideFlags: 1
@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 95267634579485672}
   - component: {fileID: 70957223957663626}
   - component: {fileID: 82341985068600756}
+  - component: {fileID: 114759029720041508}
   m_Layer: 12
   m_Name: "ca\xE7adora"
   m_TagString: Player
@@ -251,7 +252,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1804594085440946}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.37, y: -4.3099985, z: 6}
+  m_LocalPosition: {x: 0.37, y: -4.3099985, z: 7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4172325423161470}
@@ -410,7 +411,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.17736721, y: 0.2086587}
+  m_Offset: {x: -0.821785, y: 1.230907}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -421,7 +422,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3398647, y: 0.36943722}
+  m_Size: {x: 0.051029205, y: 0.07169628}
   m_EdgeRadius: 0
 --- !u!70 &70700837396989144
 CapsuleCollider2D:
@@ -606,12 +607,26 @@ MonoBehaviour:
   bonusAtaq: 0
   knockback: 0
   PC: {fileID: 0}
---- !u!114 &114421905047380308
+--- !u!114 &114644840880080340
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1329634975127642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c5493226664bc408d6888246bf61ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PC: {fileID: 0}
+  dano: 0
+  knockback: 0
+--- !u!114 &114759029720041508
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1804594085440946}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6af9cd21d451e24fa1b35e2f0f0cfd5, type: 3}
@@ -636,6 +651,7 @@ MonoBehaviour:
   - {fileID: 1287651367463280, guid: dcebffdb67314fc40a91ea7e33d38b85, type: 2}
   - {fileID: 1200773989441960, guid: 22c94074db4b5ff4ba390135e760e094, type: 2}
   - {fileID: 1197027762564188, guid: 1e9b4c9e95db22943b434e6e3c8f6689, type: 2}
+  - {fileID: 1828521832732990, guid: c90c86bc926f06f4c8c87f138689c981, type: 2}
   posiItemArremeco: {fileID: 4911673000396604}
   encostouIni: {fileID: 1394041547596914}
   pe: {fileID: 1993746161154872}
