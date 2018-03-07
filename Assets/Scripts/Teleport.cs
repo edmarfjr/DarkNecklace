@@ -62,8 +62,8 @@ public class Teleport : MonoBehaviour {
         {
             if (fase == 1)
             {
-                Bearman scr = bossObj.gameObject.GetComponent<Bearman>();
-                scr.ativo = true;
+                //Bearman scr = bossObj.gameObject.GetComponent<Bearman>();
+                //scr.ativo = true;
 
                 PC.transform.position = new Vector3(spawn.transform.position.x, spawn.transform.position.y, PC.transform.position.z);
                 cacadoraScript scriPC = PC.GetComponent<cacadoraScript>();
@@ -71,8 +71,8 @@ public class Teleport : MonoBehaviour {
             }
             if (fase == 2)
             {
-                golemBoss scr = bossObj.gameObject.GetComponent<golemBoss>();
-                scr.ativo = true;
+               // golemBoss scr = bossObj.gameObject.GetComponent<golemBoss>();
+               // scr.ativo = true;
 
                 PC.transform.position = new Vector3(spawn.transform.position.x, spawn.transform.position.y, PC.transform.position.z);
                 cacadoraScript scriPC = PC.GetComponent<cacadoraScript>();
@@ -80,8 +80,8 @@ public class Teleport : MonoBehaviour {
             }
             if (fase == 3)
             {
-                RatoAmareloBoss scr = bossObj.gameObject.GetComponent<RatoAmareloBoss>();
-                scr.ativo = true;
+               // RatoAmareloBoss scr = bossObj.gameObject.GetComponent<RatoAmareloBoss>();
+               // scr.ativo = true;
 
                 PC.transform.position = new Vector3(spawn.transform.position.x, spawn.transform.position.y, PC.transform.position.z);
                 cacadoraScript scriPC = PC.GetComponent<cacadoraScript>();

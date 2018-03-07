@@ -104,8 +104,9 @@ public class cacadoraScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-       // Arma Armascript = armaObj.GetComponent<Arma>();
-       // Armascript.chamaArma();
+        // Arma Armascript = armaObj.GetComponent<Arma>();
+        // Armascript.chamaArma();
+        
         muni.text = municao.ToString();
         if (vida > vidaMax)
             vida = vidaMax;
@@ -150,6 +151,7 @@ public class cacadoraScript : MonoBehaviour {
 			anim.SetBool ("chao", false);
         if(Time.timeScale>0)
         {
+            
             Andar();
             Pular();
             StartCoroutine(Ataque());
