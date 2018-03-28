@@ -20,7 +20,7 @@ public class velUnidade : MonoBehaviour {
     void Update()
     {
         cacadoraScript script = PC.GetComponent<cacadoraScript>();
-        int aux = (int)script.velocidade;
+        int aux = (int)script.velAnda;
         int dezena = aux % 10;
         if (dezena == 0)
         {
