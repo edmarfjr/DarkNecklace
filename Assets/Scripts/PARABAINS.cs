@@ -9,6 +9,8 @@ public class PARABAINS : MonoBehaviour {
     public GameObject tele;
     public GameObject PC;
     public int Fase;
+    public bool abriu;
+    public string texto;
     // Use this for initialization
     void Start () {
         GameObject aux = GameObject.FindWithTag("Player");
@@ -23,24 +25,48 @@ public class PARABAINS : MonoBehaviour {
         toqueTele = Physics2D.OverlapCircle(tele.transform.position, 0.1f, layerPC);
         if (toqueTele && checa.boss == 0 && Fase == 1)
         {
-            GameObject gStatus = GameObject.FindGameObjectWithTag("gameStatus");
-            GameStatus GS = gStatus.GetComponent<GameStatus>();
-            GS.saveStatus();
-            SceneManager.LoadScene(2);
+            abriu = true;
+            float x = Input.GetAxis("Vertical");
+            if (x > 0.5)
+            {
+                GameObject gStatus = GameObject.FindGameObjectWithTag("gameStatus");
+                GameStatus GS = gStatus.GetComponent<GameStatus>();
+                GS.saveStatus();
+                SceneManager.LoadScene(2);
+            }
         }
         if (toqueTele && Fase == 2)
         {
-            GameObject gStatus = GameObject.FindGameObjectWithTag("gameStatus");
-            GameStatus GS = gStatus.GetComponent<GameStatus>();
-            GS.saveStatus();
-            SceneManager.LoadScene(3);
+            abriu = true;
+            float x = Input.GetAxis("Vertical");
+            if (x > 0.5)
+            {
+                GameObject gStatus = GameObject.FindGameObjectWithTag("gameStatus");
+                GameStatus GS = gStatus.GetComponent<GameStatus>();
+                GS.saveStatus();
+                SceneManager.LoadScene(3);
+            }
         }
         if (toqueTele && Fase == 3)
         {
-            GameObject gStatus = GameObject.FindGameObjectWithTag("gameStatus");
-            GameStatus GS = gStatus.GetComponent<GameStatus>();
-            GS.saveStatus();
-            SceneManager.LoadScene(4);
+            abriu = true;
+            float x = Input.GetAxis("Vertical");
+            if (x > 0.5)
+            {
+                GameObject gStatus = GameObject.FindGameObjectWithTag("gameStatus");
+                GameStatus GS = gStatus.GetComponent<GameStatus>();
+                GS.saveStatus();
+                SceneManager.LoadScene(4);
+            }
+        }
+    }
+    void OnGUI()
+    {
+        if (abriu == true)
+        {
+            
+                GUI.Label(new Rect(Screen.height / 1.2f, Screen.width / 3 - 50, 100, 100), texto);
+                
         }
     }
 }

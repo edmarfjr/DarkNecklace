@@ -67,31 +67,33 @@ public class Bearman : MonoBehaviour
         }
         if(ativo)
         {
-            morrer();
-            if (vida>0)
+            if (Time.timeScale > 0)
             {
-                Debug.Log(PC.transform.position);
-                if (esperAtaq1 > 0)
+                morrer();
+                if (vida > 0)
                 {
-                    esperAtaq1 = esperAtaq1 - Time.deltaTime;
+                    Debug.Log(PC.transform.position);
+                    if (esperAtaq1 > 0)
+                    {
+                        esperAtaq1 = esperAtaq1 - Time.deltaTime;
+                    }
+                    if (esperAtaq2 > 0)
+                    {
+                        esperAtaq2 = esperAtaq2 - Time.deltaTime;
+                    }
+                    if (pausaAnda > 0)
+                    {
+                        pausaAnda = pausaAnda - Time.deltaTime;
+                    }
+                    agrar();
+                    //alcanceAtaque1();
+                    andar();
+                    StartCoroutine(andarTras());
+                    if (esperAtaq1 <= 0)
+                    { StartCoroutine(ataque1()); }
+                    direcao();
                 }
-                if (esperAtaq2 > 0)
-                {
-                    esperAtaq2 = esperAtaq2 - Time.deltaTime;
-                }
-                if (pausaAnda > 0)
-                {
-                    pausaAnda = pausaAnda - Time.deltaTime;
-                }
-                agrar();
-                //alcanceAtaque1();
-                andar();
-                StartCoroutine(andarTras());
-                if (esperAtaq1 <= 0)
-                { StartCoroutine(ataque1()); }
-                direcao();
             }
-            
         }
         
     }

@@ -92,7 +92,7 @@ public class Teleport : MonoBehaviour {
     void armadilhaSpawn ()
     {
         int i = Random.Range(0, 100);
-        if (i<=40)
+        if (i<=45)
         {
             int aux = Random.Range(1, 5);
             int cont = 0;

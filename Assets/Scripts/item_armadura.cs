@@ -68,23 +68,15 @@ public class item_armadura : MonoBehaviour {
             abriu = false;
         }
     }
-    
+
     void OnGUI()
     {
         if (abriu == true)
         {
-            if (semGrana == false)
+            if (semGrana == false && comprou == false)
             {
-                if(limite==true)
-                {
-                    GUI.Label(new Rect(Screen.height / 1.2f, Screen.width / 3 - 50, 100, 100), "armadura ja está no maximo");
-                }
-                if (limite == true&&comprou==false)
-                {
-                    GUI.Label(new Rect(Screen.height / 1.2f, Screen.width / 3 - 50, 100, 100), texto);
-                    GUI.Label(new Rect(Screen.height / 1.2f, Screen.width / 3, 100, 100), preco.ToString());
-                }
-                
+                GUI.Label(new Rect(Screen.height / 1.2f, Screen.width / 3 - 50, 100, 100), texto);
+                GUI.Label(new Rect(Screen.height / 1.2f, Screen.width / 3, 100, 100), preco.ToString());
             }
             if (semGrana == true)
             {

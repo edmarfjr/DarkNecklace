@@ -45,8 +45,8 @@ public class AtivaBosss : MonoBehaviour {
         {
             golemBoss scr = boss.gameObject.GetComponent<golemBoss>();
             nomeBoss.transform.localScale = new Vector3(1, 1, 1);
-            Time.timeScale = 0.1f;
-            yield return new WaitForSeconds(3f);
+            Time.timeScale = 0.0001f;
+            yield return new WaitForSeconds(0.0003f);
             nomeBoss.transform.localScale = new Vector3(0, 0, 0);
             Time.timeScale = 1f;
             scr.ativo = true;
@@ -55,8 +55,8 @@ public class AtivaBosss : MonoBehaviour {
         {
             RatoAmareloBoss scr = boss.gameObject.GetComponent<RatoAmareloBoss>();
             nomeBoss.transform.localScale = new Vector3(1, 1, 1);
-            Time.timeScale = 0.1f;
-            yield return new WaitForSeconds(3f);
+            Time.timeScale = 0.0001f;
+            yield return new WaitForSeconds(0.0003f);
             nomeBoss.transform.localScale = new Vector3(0, 0, 0);
             Time.timeScale = 1f;
             scr.ativo = true;

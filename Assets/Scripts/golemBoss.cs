@@ -34,11 +34,14 @@ public class golemBoss : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        dir();
-        coldown();
-        StartCoroutine(ataque1());
-        StartCoroutine(ataque2());
-        morrer();
+        if (Time.timeScale > 0)
+        {
+            dir();
+            coldown();
+            StartCoroutine(ataque1());
+            StartCoroutine(ataque2());
+            morrer();
+        }
     }
 
     void dir()

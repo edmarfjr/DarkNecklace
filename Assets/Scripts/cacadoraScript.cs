@@ -226,11 +226,11 @@ public class cacadoraScript : MonoBehaviour {
     }
 
     void Andar ()
-	{	if (andasom == true && somAndaTemp<=0 && estaNoChao&&!dash)
-        {
-          RandomsizeSdx(moveSound1);
-            somAndaTemp = 0.5f;       
-        }
+	{	//if (andasom == true && somAndaTemp<=0 && estaNoChao&&!dash)
+       // {
+         // RandomsizeSdx(moveSound1);
+         //   somAndaTemp = 0.5f;       
+      //  }
 		if (dash == false && atacou == false&&dead==false) {
 			
 			if (invencibilidade <= 0) {
@@ -618,7 +618,7 @@ public class cacadoraScript : MonoBehaviour {
         if (col.gameObject.tag == "Moeda" && atacou == false)
         {
             int i = Random.Range(1, 5);
-            moedas += i/2;
+            moedas += i/1;
          PlaySingle(pegaMoeda, 1.4f);
             Destroy(col.gameObject);
         }

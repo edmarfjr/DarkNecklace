@@ -60,22 +60,25 @@ public class RatoAmareloBoss : MonoBehaviour {
         }
         if (ativo)
         {
-            morrer();
-            if (vida > 0)
-            {
-                StartCoroutine(ataque());
-                StartCoroutine(invoca());
-                if (contTele == 0 && !teleport && !invocou && invocafim)
+            if (Time.timeScale > 0)
+            { 
+                morrer();
+                if (vida > 0)
                 {
-                    StartCoroutine(tele());
+                    StartCoroutine(ataque());
+                    StartCoroutine(invoca());
+                    if (contTele == 0 && !teleport && !invocou && invocafim)
+                    {
+                        StartCoroutine(tele());
+                    }
+                    if (invocou && checa.Nini <= 0 && invocafim)
+                    {
+                        StartCoroutine(tele());
+                        invocou = false;
+                        esperSummon = 20;
+                    }
                 }
-                if (invocou && checa.Nini <= 0 && invocafim)
-                {
-                    StartCoroutine(tele());
-                    invocou = false;
-                    esperSummon = 20;
-                }
-            }      
+            }
         }
     }
     void agrar()

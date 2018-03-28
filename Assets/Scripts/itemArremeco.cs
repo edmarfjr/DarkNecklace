@@ -32,6 +32,10 @@ public class itemArremeco : MonoBehaviour {
             dano = 2;
             knockback = 1.2f;
         }
-
+        if (scriPC.itemTipo == "bombaIncend")
+        {
+            dano = 1;
+            knockback = 0.4f;
+        }
     }
 }

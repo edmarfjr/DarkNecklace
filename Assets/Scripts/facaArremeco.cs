@@ -22,7 +22,7 @@ public class facaArremeco : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.tag.Equals("inimigo"))
+        if (col.tag.Equals("inimigo")|| col.tag.Equals("boss"))
         {
             if(!tiro)
             Destroy(gameObject);

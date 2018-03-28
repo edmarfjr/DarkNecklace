@@ -181,9 +181,8 @@ public class Ratman : MonoBehaviour
             esperAtaq = 4;
             if(armadura)
             {
-                anim.SetBool("atirando", true);
-                PlaySingle(tiro, 0.2f);
-                yield return new WaitForSeconds(0.7f);
+                
+                yield return new WaitForSeconds(1.0f);
                 
                 criaFlecha();
                 yield return new WaitForSeconds(0.3f);
@@ -194,7 +193,7 @@ public class Ratman : MonoBehaviour
             {
                 anim.SetBool("atirando", true);
                 yield return new WaitForSeconds(0.3f);
-                PlaySingle(tiro, 1f);
+                
                 yield return new WaitForSeconds(0.6f);
                 criaFlecha();
                 anim.SetBool("atirando", false);
@@ -289,7 +288,11 @@ public class Ratman : MonoBehaviour
 
     void criaFlecha()
     {
-
+        anim.SetBool("atirando", true);
+        if(armadura)
+            PlaySingle(tiro, 0.5f);
+        else
+            PlaySingle(tiro, 1);
         if (tempStag<=0)
         {
             GameObject cloneFlecha = Instantiate(flecha, new Vector2(posiFlecha.position.x, posiFlecha.position.y), Quaternion.identity);

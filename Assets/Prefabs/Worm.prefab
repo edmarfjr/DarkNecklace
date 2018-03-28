@@ -224,10 +224,10 @@ MonoBehaviour:
   vel: 5
   anim: {fileID: 0}
   agro: 0
-  distAgro: 20
+  distAgro: 15
   alcAtaq: 0
   esperAtaq: 0
-  vida: 5
+  vida: 4
   atacando: 0
   golpeado: 0
   encostouDir: 0
