@@ -44,17 +44,20 @@ public class golem : MonoBehaviour {
         {
             tempoRola -= Time.deltaTime;
         }
-        dire();
-        alcanceAtaque();
-        StartCoroutine(ataque());
-        if (atacando&&tempoRola>0)
+        if (vida > 0)
         {
-            coll.enabled = false;
-            moveAtaque();
-        }
-        if(!atacando)
-        {
-            coll.enabled = true;
+            dire();
+            alcanceAtaque();
+            StartCoroutine(ataque());
+            if (atacando && tempoRola > 0)
+            {
+                coll.enabled = false;
+                moveAtaque();
+            }
+            if (!atacando)
+            {
+                coll.enabled = true;
+            }
         }
         if(vida<=0)
         {
